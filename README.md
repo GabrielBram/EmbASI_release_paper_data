@@ -1,8 +1,10 @@
-# This dataset contains the input file, generation, HPC submission scripts, and output files for the Manuscript A General Pythonic Framework for DFT-in-DFT and WF-in-DFT Embedding 
+#  Dataset for Manuscript entitled: A General Pythonic Framework for DFT-in-DFT and WF-in-DFT Embedding 
 ## by Gabriel Bramley, Pavel Stishenko, Volker Blum, and Andrew Logsdail
 
 The datasets contain calculation performed with the EmbASI QM/QM embedding wrapper (https://github.com/tamm-cci/EmbASI)
-interfaced to the FHI-aims all-electron, full-potential software package.
+interfaced to the FHI-aims all-electron, full-potential software package. Each directory contains 
+the input file, generation, HPC submission scripts, and output files for calculations related to the 
+publication
 
 The directory structure and the corresponding Sections in the manuscript are specified below:
 
