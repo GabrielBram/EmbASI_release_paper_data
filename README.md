@@ -1,15 +1,14 @@
-This dataset contains the input file, generation, HPC submission scripts, and output files for the Manuscript:
+# This dataset contains the input file, generation, HPC submission scripts, and output files for the Manuscript:
 
-A General Pythonic Framework for DFT-in-DFT and WF-in-DFT Embedding
-
-by Gabriel Bramley, Pavel Stishenko, Volker Blum, and Andrew Logsdail
+# A General Pythonic Framework for DFT-in-DFT and WF-in-DFT Embedding
+# by Gabriel Bramley, Pavel Stishenko, Volker Blum, and Andrew Logsdail
 
 The datasets contain calculation performed with the EmbASI QM/QM embedding wrapper (https://github.com/tamm-cci/EmbASI)
 interfaced to the FHI-aims all-electron, full-potential software package.
 
 The directory structure and the corresponding Sections in the manuscript are specified below:
 
-Section 4.1: EMBASI_RELEASE_PAPER_DATA/Pentanol_embedding/
+# Section 4.1: EMBASI_RELEASE_PAPER_DATA/Pentanol_embedding/
 
 Each subdirectory contains calculations performed with the EmbASI QM/QM embedding wrapper for the dissocation
 of a pentanol dimer over a range of distances (1.26-4.36 \AA). Simulations are performed with the NAO-VCC-4Z
@@ -45,7 +44,7 @@ Pentanol_RPA@PBEinPBE_qmloc_huzinaga/nn3_BASIS/
 Pentanol_RPA@PBEinPBE_qmloc_huzinaga/nn4_BASIS/
 
 
-Section 4.2: EMBASI_RELEASE_PAPER_DATA/Acid_dimer_embedding
+# Section 4.2: EMBASI_RELEASE_PAPER_DATA/Acid_dimer_embedding
 
 Each subdirectory contains calculations performed with the EmbASI QM/QM embedding wrapper for the dissocation
 of an organic acid dimer with various levels of basis truncation (1.0 |e| - 10^{-6} |e|) . Simulations are
