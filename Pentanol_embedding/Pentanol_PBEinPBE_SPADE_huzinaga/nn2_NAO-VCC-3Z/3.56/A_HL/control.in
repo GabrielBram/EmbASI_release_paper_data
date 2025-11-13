@@ -1,0 +1,236 @@
+#===============================================================================
+# Created using the Atomic Simulation Environment (ASE)
+
+# Mon Jul 14 13:26:40 2025
+
+#===============================================================================
+xc                                 PBE
+relativistic                       atomic_zora scalar
+occupation_type                    gaussian 0.01
+mixer                              pulay
+KS_method                          parallel
+RI_method                          LVL
+n_max_pulay                        10
+collect_eigenvectors               .true.
+density_update_method              density_matrix
+lmo_pm_charge_metric               mulliken
+atomic_solver_xc                   PBE
+basis_threshold                    1e-05
+override_illconditioning           .true.
+override_initial_charge_check      .true.
+frequency_points                   50
+use_2d_corr                        .false.
+qm_embedding_mo_localise           .true.
+qm_embedding_calc                  3
+charge                             -1.999999999999993
+#===============================================================================
+
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "NAO-VCC-3Z" defaults for C atom (to be pasted into control.in file)
+#
+#  Please cite:
+#
+#  Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler,
+#  "Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar"
+#  New Journal of Physics 15, 123033 (2013).
+#  http://dx.doi.org/10.1088/1367-2630/15/12/123033
+#
+################################################################################
+  species        C
+#     set basis set reference for FHI-aims output
+    cite_reference NAO-VCC-2013
+#     global species definitions
+    nucleus             6
+    mass                12.0107
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-4
+#
+    radial_base         34 7.0
+    radial_multiplier   2
+    angular_grids       specified
+      division   0.2187   50
+      division   0.4416  110
+      division   0.6335  194
+      division   0.7727  302
+      division   0.8772  434
+      division   0.9334  590
+#      division   0.9924  770
+#      division   1.0230  974
+#      division   1.5020 1202
+#      outer_grid  974
+      outer_grid  770
+#      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      2  s   2.
+    valence      2  p   2.
+#     ion occupancy
+    ion_occ      2  s   1.
+    ion_occ      2  p   1.
+################################################################################
+
+ basis_acc              1e-04
+#============================================
+# Optimization in      C for       NAO-VCC-3Z
+#============================================
+# (sp) correlation set
+ hydro     1     s      1.80690099
+ hydro     1     s      3.25966754
+ hydro     2     p      1.97404286
+ hydro     2     p      3.16616778
+# polarization set
+ hydro     3     d      5.89063938
+ hydro     3     d      6.67716137
+ hydro     4     f     10.14967498
+# (sp) enhanced minimal set
+ hydro     1     s      6.77306992
+ hydro     1     s     13.85913422
+ hydro     2     p      3.64746093
+################################################################################
+#
+#  FHI-aims code project
+# Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "NAO-VCC-3Z" defaults for O atom (to be pasted into control.in file)
+#
+#  Please cite:
+#
+#  Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler,
+#  "Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar"
+#  New Journal of Physics 15, 123033 (2013).
+#  http://dx.doi.org/10.1088/1367-2630/15/12/123033
+#
+################################################################################
+  species        O
+#     set basis set reference for FHI-aims output
+    cite_reference NAO-VCC-2013
+#     global species definitions
+    nucleus             8
+    mass                15.9994
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-4
+#
+    radial_base         36 7.0
+    radial_multiplier   2
+    angular_grids       specified
+      division   0.1817   50
+      division   0.3417  110
+      division   0.4949  194
+      division   0.6251  302
+      division   0.8014  434
+      division   0.8507  590
+#      division   0.8762  770
+#      division   0.9023  974
+#      division   1.2339 1202
+#      outer_grid 974
+      outer_grid 770
+#      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      2  s   2.
+    valence      2  p   4.
+#     ion occupancy
+    ion_occ      2  s   1.
+    ion_occ      2  p   3.
+################################################################################
+
+ basis_acc              1e-04
+#============================================
+# Optimization in      O for       NAO-VCC-3Z
+#============================================
+# (sp) correlation set
+ hydro     1     s      1.84877109
+ hydro     1     s      3.09577821
+ hydro     2     p      2.44895734
+ hydro     2     p      5.85722578
+# polarization set
+ hydro     3     d      8.53701653
+ hydro     3     d      8.96275978
+ hydro     4     f     14.09619628
+# (sp) enhanced minimal basis
+ hydro     1     s      3.62165559
+ hydro     1     s      5.97272514
+ hydro     2     p      6.29404180
+################################################################################
+#
+#  FHI-aims code project
+#  Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+#
+#  Suggested "NAO-VCC-3Z" defaults for H atom (to be pasted into control.in file)
+#
+#  Please cite:
+#
+#  Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler,
+#  "Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar"
+#  New Journal of Physics 15, 123033 (2013).
+#  http://dx.doi.org/10.1088/1367-2630/15/12/123033
+#
+################################################################################
+  species        H
+#     set basis set reference for FHI-aims output
+    cite_reference NAO-VCC-2013
+#     global species definitions
+    nucleus             1
+    mass                1.00794
+#
+    l_hartree           6
+#
+    cut_pot             4.0  2.0  1.0
+    basis_dep_cutoff    0e-4
+#     
+    radial_base         24 7.0
+    radial_multiplier   2
+    angular_grids       specified
+      division   0.1930   50
+      division   0.3175  110
+      division   0.4293  194
+      division   0.5066  302
+      division   0.5626  434
+      division   0.5922  590
+#      division   0.6227  974
+#      division   0.6868 1202
+      outer_grid  770
+#      outer_grid  434
+################################################################################
+#
+#  Definition of "minimal" basis
+#
+################################################################################
+#     valence basis states
+    valence      1  s   1.
+#     ion occupancy
+    ion_occ      1  s   0.5
+################################################################################
+
+
+ basis_acc              1e-04
+#============================================
+# Optimization in      H for       NAO-VCC-3Z
+#============================================
+# (sp) correlation set
+ hydro     1     s      1.21957223
+ hydro     1     s      1.79015338
+ hydro     2     p      3.43862914
+ hydro     2     p      3.48684723
+# polarization set
+ hydro     3     d      6.20828695
+# (sp) enhanced minimal set
+ hydro     1     s      2.62768292

@@ -1,0 +1,47 @@
+#!/bin/bash --login 
+# This submission script was automatically generated using the Calculation Generator at Tue Oct 18 15:28:51 2022. 
+# This script is intended for submission to the HAWK_AMD HPC. 
+# For any submission script related problems, try fiddling with the settings. 
+
+#SBATCH -n 128
+#SBATCH --tasks-per-node=64
+#SBATCH -t 0-24:00
+#SBATCH -p c_compute_chemy3
+#SBATCH --account=scw1057
+
+# module approach to setting up working environment
+module purge
+# Load the environment
+module load mpi
+module load python
+module use /apps/local/modules/projects
+module load scw1057/fhi-aims
+
+ulimit -s unlimited
+
+# This is introduced as the default PYTHONPATH was changed in March 2022
+# Provides backwards compatibility.
+. /scratch/c.sacgb4/CCI-GEP_tests/Software/.python-3.7.0-embedding/bin/activate
+export PYTHONPATH=/home/c.sacgb4/carmm_geodesic/:$PYTHONPATH
+
+OUTPUT_FILE=calc
+
+export output=$OUTPUT_FILE.log
+export error=$OUTPUT_FILE.err
+
+SETTINGS_FILE="env.log"
+module list > $SETTINGS_FILE
+printenv LD_LIBRARY_PATH >> $SETTINGS_FILE
+
+function submit_test() {
+    mkdir $1
+    cp dissoc_test_$1.py $1
+    cp csv_writer.py $1
+    cp *.xyz $1
+    cd $1
+    time srun python3 dissoc_test_$1.py 1> >(tee $output ) 2> >(tee $error >&2 )
+    cd ..
+}
+
+submit_test "pbe"
+#submit_test "rpainpbe"

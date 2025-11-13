@@ -1,0 +1,103 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"epcc-job-env"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "epcc-job-env"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+
+Lmod is automatically replacing "cce/15.0.0" with "gcc/11.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.23
+
+/work/e05/e05/gabram/carmm/:/opt/cray/pe/python/3.9.13.1:/work/y07/shared/utils/core/bolt/0.8/modules
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+mkdir: cannot create directory ‘nn3_NAO-VCC-4Z’: File exists
+
+real	28m39.907s
+user	0m0.032s
+sys	0m0.056s
+
+real	29m0.543s
+user	0m0.036s
+sys	0m0.061s
+
+real	29m0.904s
+user	0m0.041s
+sys	0m0.040s
+
+real	29m31.428s
+user	0m0.034s
+sys	0m0.038s
+
+real	29m35.204s
+user	0m0.031s
+sys	0m0.032s
+
+real	29m36.279s
+user	0m0.033s
+sys	0m0.037s
+
+real	29m42.056s
+user	0m0.034s
+sys	0m0.030s
+
+real	29m44.469s
+user	0m0.038s
+sys	0m0.029s
+
+real	29m53.403s
+user	0m0.037s
+sys	0m0.029s
+
+real	29m53.972s
+user	0m0.038s
+sys	0m0.026s
+
+real	29m56.099s
+user	0m0.030s
+sys	0m0.035s
+
+real	29m57.734s
+user	0m0.036s
+sys	0m0.030s
+
+real	30m0.366s
+user	0m0.032s
+sys	0m0.031s
+
+real	30m6.732s
+user	0m0.033s
+sys	0m0.034s
+
+real	30m10.801s
+user	0m0.034s
+sys	0m0.032s
+
+real	30m16.041s
+user	0m0.029s
+sys	0m0.038s

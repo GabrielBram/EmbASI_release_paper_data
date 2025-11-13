@@ -1,0 +1,43 @@
+Running EmbASI calculation in directory: nn0_NAO-VCC-4Z/2.16
+MO projection performed with: huzinaga
+Embedding calculation begun...
+Calculation nn0_NAO-VCC-4Z/2.16/AB_LL...
+Initialising basis info...
+Initialising basis info...
+ Population of Subsystem AB: 100.00000000000011
+ Population of Subsystem A: 20.00000000000001
+ Population of Subsystem B: 80.00000000000011
+Calculation nn0_NAO-VCC-4Z/2.16/A_LL...
+Pre-GC A_LL: (240380061, 240380613)
+Post-GC A_LL: (137353487, 240380613)
+Calculation nn0_NAO-VCC-4Z/2.16/A_HL...
+Pre-GC A_HL: (274691661, 291817484)
+Post-GC A_HL: (137369871, 291817484)
+Calculation nn0_NAO-VCC-4Z/2.16/A_HL_PP...
+Pre-GC A_HL_PP: (240413838, 291817484)
+Post-GC A_HL_PP: (137387373, 291817484)
+ ----------- FINAL         OUTPUTS --------- 
+ 
+ Population Information:
+ Population of Subsystem AB: 100.00000000000011
+ Population of Subsystem A: 20.00000000000001
+ Population of Subsystem B: 80.00000000000011
+ 
+ Intermediate Information:
+ WARNING: These are not faithful, ground-state KS total energies - 
+ In the case of low-level references, they are calculated using the 
+ density components of the high-level energy reference for fragment A. 
+ Do not naively use these energies unless you are comfortable with 
+ their true definition. 
+ Total Energy (A+B Low-Level): -14855.041869223542 eV
+ Total Energy (A Low-Level): -4068.160320468128 eV
+ Total Energy (A High-Level): -4068.1603204681724 eV
+ Projection operator energy correction DM^(A_HL) @ Pb: 4.467408091166081e-13 eV
+ First order energy correction (DM^(A_HL)-DM^(A_LL)) @ v_emb): -4.917253666751182e-12 eV
+  
+ Final Energies Information:
+ Final total energy (Uncorrected): -14855.041869223593 eV
+ Final total energy (Projection Corrected): -14855.041869223593 eV
+ 
+ -----------======================--------- 
+ 

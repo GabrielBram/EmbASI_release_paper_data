@@ -1,0 +1,16 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"epcc-job-env"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "epcc-job-env"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/work/e05/e05/gabram/carmm/:/opt/cray/pe/python/3.9.13.1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9978434.0 ON nid001007 CANCELLED AT 2025-06-27T17:47:23 ***
+slurmstepd: error: *** JOB 9978434 ON nid001007 CANCELLED AT 2025-06-27T17:47:23 ***

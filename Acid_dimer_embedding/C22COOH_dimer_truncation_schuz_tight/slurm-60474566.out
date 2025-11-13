@@ -1,0 +1,9 @@
+/home/c.sacgb4/.bash_profile: line 44: cdscr: command not found
+INFO: Added fhi-aims to PATH, latest build 220309
+/home/c.sacgb4/carmm_geodesic/:
+/home/c.sacgb4/carmm_geodesic/:
+mkdir: cannot create directory ‘trunc-0.000001_tight_PBE0_PBE_None’: File exists
+
+real	1m56.049s
+user	0m0.035s
+sys	0m0.016s

@@ -1,0 +1,70 @@
+Running EmbASI calculation in directory: 1nn_NAO-VCC-3Z/0.0
+MO projection performed with: huzinaga
+Embedding calculation begun...
+Calculation 1nn_NAO-VCC-3Z/0.0/AB_LL...
+Initialising basis info...
+Pre-GC AB_LL: (10014246, 14196666)
+Starting SPADE localisation...
+Maximum SPADE state for subsystem A: 9
+SPADE total supersystem A+B charge: 50.000000000000256
+SPADE localised subsystem A charge: 18.000000000000124
+SPADE localised subsystem B charge: 32.000000000000135
+Exiting SPADE localisation...
+Initialising basis info...
+ Population of Subsystem AB: 50.000000000000256
+ Population of Subsystem A: 18.000000000000124
+ Population of Subsystem B: 32.000000000000135
+Calculation 1nn_NAO-VCC-3Z/0.0/A_LL...
+Pre-GC A_LL: (17792536, 18566968)
+Post-GC A_LL: (9953406, 18566968)
+Calculation 1nn_NAO-VCC-3Z/0.0/A_HL...
+Pre-GC A_HL: (19867844, 23276568)
+Post-GC A_HL: (9960152, 23276568)
+Calculation 1nn_NAO-VCC-3Z/0.0/A_HL_PP...
+Pre-GC A_HL_PP: (17439405, 23276568)
+Post-GC A_HL_PP: (9969582, 23276568)
+ ----------- FINAL         OUTPUTS --------- 
+ 
+ Population Information:
+ Population of Subsystem AB: 50.000000000000256
+ Population of Subsystem A: 18.000000000000124
+ Population of Subsystem B: 32.000000000000135
+ 
+ Intermediate Information:
+ WARNING: These are not faithful, ground-state KS total energies - 
+ In the case of low-level references, they are calculated using the 
+ density components of the high-level energy reference for fragment A. 
+ Do not naively use these energies unless you are comfortable with 
+ their true definition. 
+ Total Energy (A+B Low-Level): -7427.37580392111 eV
+ Total Energy (A Low-Level): -3101.952586090455 eV
+ Total Energy (A High-Level): -3109.137312535419 eV
+ Projection operator energy correction DM^(A_HL) @ Pb: 1.4172597266395859e-12 eV
+ First order energy correction (DM^(A_HL)-DM^(A_LL)) @ v_emb): -4.603263255010901e-12 eV
+  
+ Final Energies Information:
+ Final total energy (Uncorrected): -7434.560530366079 eV
+ Final total energy (Projection Corrected): -7434.560530366077 eV
+ 
+ -----------======================--------- 
+ 
+Running EmbASI calculation in directory: 1nn_NAO-VCC-3Z/1.26
+MO projection performed with: huzinaga
+Embedding calculation begun...
+Calculation 1nn_NAO-VCC-3Z/1.26/AB_LL...
+Initialising basis info...
+Pre-GC AB_LL: (39381367, 39381639)
+Starting SPADE localisation...
+Maximum SPADE state for subsystem A: 18
+SPADE total supersystem A+B charge: 99.99999999999997
+SPADE localised subsystem A charge: 35.99999999999998
+SPADE localised subsystem B charge: 63.99999999999997
+Exiting SPADE localisation...
+Initialising basis info...
+ Population of Subsystem AB: 99.99999999999997
+ Population of Subsystem A: 35.99999999999998
+ Population of Subsystem B: 63.99999999999997
+Calculation 1nn_NAO-VCC-3Z/1.26/A_LL...
+Pre-GC A_LL: (68934198, 68934750)
+Post-GC A_LL: (39230294, 68934750)
+Calculation 1nn_NAO-VCC-3Z/1.26/A_HL...

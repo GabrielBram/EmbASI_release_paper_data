@@ -1,0 +1,2947 @@
+------------------------------------------------------------
+          Invoking FHI-aims ...
+
+          When using FHI-aims, please cite the following reference:
+
+            Volker Blum, Ralf Gehrke, Felix Hanke, Paula Havu,
+            Ville Havu, Xinguo Ren, Karsten Reuter, and Matthias Scheffler,
+            'Ab Initio Molecular Simulations with Numeric Atom-Centered Orbitals',
+            Computer Physics Communications 180, 2175-2196 (2009)
+
+          In addition, many other developments in FHI-aims are likely important for
+          your particular application. If so, please cite them. A partial list of references
+          is written at the end of this file. Thank you for giving credit to the authors
+          of these developments.
+
+          For general information about FHI-aims please find us at
+
+            https://fhi-aims.org
+
+          Online tutorials can be found at
+
+            https://fhi-aims-club.gitlab.io/tutorials/tutorials-overview/
+
+          For any questions about FHI-aims, please visit our slack channel at
+
+            https://fhi-aims.slack.com
+
+          and our main development and support site at
+
+            https://aims-git.rz-berlin.mpg.de .
+
+          The latter site, in particular, has a wiki to collect information, as well
+          as an issue tracker to log discussions, suggest improvements, and report issues
+          or bugs. https://aims-git.rz-berlin.mpg.de is also the main development site
+          of the project and all new and updated code versions can be obtained there.
+          Please send an email to aims-coordinators@fhi-berlin.mpg.de and we will add
+          you to these sites. They are for you and everyone is welcome there.
+
+------------------------------------------------------------
+
+
+
+  Date     :  20250628, Time     :  161454.327
+  Time zero on CPU 1             :   0.170611544000000E+03  s.
+  Internal wall clock time zero  :           520359294.327  s.
+
+  FHI-aims created a unique identifier for this run for later identification
+  aims_uuid : 28F538A8-FC7A-4975-A497-FCD686AE46A0
+
+  Build configuration of the current instance of FHI-aims
+  -------------------------------------------------------
+  FHI-aims version      : 250403
+  Commit number         : 316072d87
+  CMake host system     : Linux-5.14.21-150400.24.46_12.0.70-cray_shasta_c
+  CMake version         : 3.20.4
+  Fortran compiler      : /opt/cray/pe/craype/2.7.19/bin/ftn (GNU) version 11.2.0
+  Fortran compiler flags: -O2 -fPIC -fallow-argument-mismatch -ffree-line-length-none
+  C compiler            : /opt/cray/pe/craype/2.7.19/bin/cc (GNU) version 11.2.0
+  C compiler flags      : -O2
+  C++ compiler          : /opt/cray/pe/gcc/11.2.0/bin/c++ (GNU) version 11.2.0
+  C++ compiler flags    : -O2
+  HIP compiler          :
+  HIP compiler flags    :
+  HIP GPU arch          :
+  Using MPI
+  Using ScaLAPACK
+  Using LibXC
+  Using i-PI
+  Using RLSY
+  Linking against:
+
+  Using      256 parallel tasks.
+  Task        0 on host nid001177 reporting.
+  Task        1 on host nid001177 reporting.
+  Task        2 on host nid001177 reporting.
+  Task        3 on host nid001177 reporting.
+  Task        4 on host nid001177 reporting.
+  Task        5 on host nid001177 reporting.
+  Task        6 on host nid001177 reporting.
+  Task        7 on host nid001177 reporting.
+  Task        8 on host nid001177 reporting.
+  Task        9 on host nid001177 reporting.
+  Task       10 on host nid001177 reporting.
+  Task       11 on host nid001177 reporting.
+  Task       12 on host nid001177 reporting.
+  Task       13 on host nid001177 reporting.
+  Task       14 on host nid001177 reporting.
+  Task       15 on host nid001177 reporting.
+  Task       16 on host nid001177 reporting.
+  Task       17 on host nid001177 reporting.
+  Task       18 on host nid001177 reporting.
+  Task       19 on host nid001177 reporting.
+  Task       20 on host nid001177 reporting.
+  Task       21 on host nid001177 reporting.
+  Task       22 on host nid001177 reporting.
+  Task       23 on host nid001177 reporting.
+  Task       24 on host nid001177 reporting.
+  Task       25 on host nid001177 reporting.
+  Task       26 on host nid001177 reporting.
+  Task       27 on host nid001177 reporting.
+  Task       28 on host nid001177 reporting.
+  Task       29 on host nid001177 reporting.
+  Task       30 on host nid001177 reporting.
+  Task       31 on host nid001177 reporting.
+  Task       32 on host nid001177 reporting.
+  Task       33 on host nid001177 reporting.
+  Task       34 on host nid001177 reporting.
+  Task       35 on host nid001177 reporting.
+  Task       36 on host nid001177 reporting.
+  Task       37 on host nid001177 reporting.
+  Task       38 on host nid001177 reporting.
+  Task       39 on host nid001177 reporting.
+  Task       40 on host nid001177 reporting.
+  Task       41 on host nid001177 reporting.
+  Task       42 on host nid001177 reporting.
+  Task       43 on host nid001177 reporting.
+  Task       44 on host nid001177 reporting.
+  Task       45 on host nid001177 reporting.
+  Task       46 on host nid001177 reporting.
+  Task       47 on host nid001177 reporting.
+  Task       48 on host nid001177 reporting.
+  Task       49 on host nid001177 reporting.
+  Task       50 on host nid001177 reporting.
+  Task       51 on host nid001177 reporting.
+  Task       52 on host nid001177 reporting.
+  Task       53 on host nid001177 reporting.
+  Task       54 on host nid001177 reporting.
+  Task       55 on host nid001177 reporting.
+  Task       56 on host nid001177 reporting.
+  Task       57 on host nid001177 reporting.
+  Task       58 on host nid001177 reporting.
+  Task       59 on host nid001177 reporting.
+  Task       60 on host nid001177 reporting.
+  Task       61 on host nid001177 reporting.
+  Task       62 on host nid001177 reporting.
+  Task       63 on host nid001177 reporting.
+  Task       64 on host nid001177 reporting.
+  Task       65 on host nid001177 reporting.
+  Task       66 on host nid001177 reporting.
+  Task       67 on host nid001177 reporting.
+  Task       68 on host nid001177 reporting.
+  Task       69 on host nid001177 reporting.
+  Task       70 on host nid001177 reporting.
+  Task       71 on host nid001177 reporting.
+  Task       72 on host nid001177 reporting.
+  Task       73 on host nid001177 reporting.
+  Task       74 on host nid001177 reporting.
+  Task       75 on host nid001177 reporting.
+  Task       76 on host nid001177 reporting.
+  Task       77 on host nid001177 reporting.
+  Task       78 on host nid001177 reporting.
+  Task       79 on host nid001177 reporting.
+  Task       80 on host nid001177 reporting.
+  Task       81 on host nid001177 reporting.
+  Task       82 on host nid001177 reporting.
+  Task       83 on host nid001177 reporting.
+  Task       84 on host nid001177 reporting.
+  Task       85 on host nid001177 reporting.
+  Task       86 on host nid001177 reporting.
+  Task       87 on host nid001177 reporting.
+  Task       88 on host nid001177 reporting.
+  Task       89 on host nid001177 reporting.
+  Task       90 on host nid001177 reporting.
+  Task       91 on host nid001177 reporting.
+  Task       92 on host nid001177 reporting.
+  Task       93 on host nid001177 reporting.
+  Task       94 on host nid001177 reporting.
+  Task       95 on host nid001177 reporting.
+  Task       96 on host nid001177 reporting.
+  Task       97 on host nid001177 reporting.
+  Task       98 on host nid001177 reporting.
+  Task       99 on host nid001177 reporting.
+  Task      100 on host nid001177 reporting.
+  Task      101 on host nid001177 reporting.
+  Task      102 on host nid001177 reporting.
+  Task      103 on host nid001177 reporting.
+  Task      104 on host nid001177 reporting.
+  Task      105 on host nid001177 reporting.
+  Task      106 on host nid001177 reporting.
+  Task      107 on host nid001177 reporting.
+  Task      108 on host nid001177 reporting.
+  Task      109 on host nid001177 reporting.
+  Task      110 on host nid001177 reporting.
+  Task      111 on host nid001177 reporting.
+  Task      112 on host nid001177 reporting.
+  Task      113 on host nid001177 reporting.
+  Task      114 on host nid001177 reporting.
+  Task      115 on host nid001177 reporting.
+  Task      116 on host nid001177 reporting.
+  Task      117 on host nid001177 reporting.
+  Task      118 on host nid001177 reporting.
+  Task      119 on host nid001177 reporting.
+  Task      120 on host nid001177 reporting.
+  Task      121 on host nid001177 reporting.
+  Task      122 on host nid001177 reporting.
+  Task      123 on host nid001177 reporting.
+  Task      124 on host nid001177 reporting.
+  Task      125 on host nid001177 reporting.
+  Task      126 on host nid001177 reporting.
+  Task      127 on host nid001177 reporting.
+  Task      128 on host nid001178 reporting.
+  Task      129 on host nid001178 reporting.
+  Task      130 on host nid001178 reporting.
+  Task      131 on host nid001178 reporting.
+  Task      132 on host nid001178 reporting.
+  Task      133 on host nid001178 reporting.
+  Task      134 on host nid001178 reporting.
+  Task      135 on host nid001178 reporting.
+  Task      136 on host nid001178 reporting.
+  Task      137 on host nid001178 reporting.
+  Task      138 on host nid001178 reporting.
+  Task      139 on host nid001178 reporting.
+  Task      140 on host nid001178 reporting.
+  Task      141 on host nid001178 reporting.
+  Task      142 on host nid001178 reporting.
+  Task      143 on host nid001178 reporting.
+  Task      144 on host nid001178 reporting.
+  Task      145 on host nid001178 reporting.
+  Task      146 on host nid001178 reporting.
+  Task      147 on host nid001178 reporting.
+  Task      148 on host nid001178 reporting.
+  Task      149 on host nid001178 reporting.
+  Task      150 on host nid001178 reporting.
+  Task      151 on host nid001178 reporting.
+  Task      152 on host nid001178 reporting.
+  Task      153 on host nid001178 reporting.
+  Task      154 on host nid001178 reporting.
+  Task      155 on host nid001178 reporting.
+  Task      156 on host nid001178 reporting.
+  Task      157 on host nid001178 reporting.
+  Task      158 on host nid001178 reporting.
+  Task      159 on host nid001178 reporting.
+  Task      160 on host nid001178 reporting.
+  Task      161 on host nid001178 reporting.
+  Task      162 on host nid001178 reporting.
+  Task      163 on host nid001178 reporting.
+  Task      164 on host nid001178 reporting.
+  Task      165 on host nid001178 reporting.
+  Task      166 on host nid001178 reporting.
+  Task      167 on host nid001178 reporting.
+  Task      168 on host nid001178 reporting.
+  Task      169 on host nid001178 reporting.
+  Task      170 on host nid001178 reporting.
+  Task      171 on host nid001178 reporting.
+  Task      172 on host nid001178 reporting.
+  Task      173 on host nid001178 reporting.
+  Task      174 on host nid001178 reporting.
+  Task      175 on host nid001178 reporting.
+  Task      176 on host nid001178 reporting.
+  Task      177 on host nid001178 reporting.
+  Task      178 on host nid001178 reporting.
+  Task      179 on host nid001178 reporting.
+  Task      180 on host nid001178 reporting.
+  Task      181 on host nid001178 reporting.
+  Task      182 on host nid001178 reporting.
+  Task      183 on host nid001178 reporting.
+  Task      184 on host nid001178 reporting.
+  Task      185 on host nid001178 reporting.
+  Task      186 on host nid001178 reporting.
+  Task      187 on host nid001178 reporting.
+  Task      188 on host nid001178 reporting.
+  Task      189 on host nid001178 reporting.
+  Task      190 on host nid001178 reporting.
+  Task      191 on host nid001178 reporting.
+  Task      192 on host nid001178 reporting.
+  Task      193 on host nid001178 reporting.
+  Task      194 on host nid001178 reporting.
+  Task      195 on host nid001178 reporting.
+  Task      196 on host nid001178 reporting.
+  Task      197 on host nid001178 reporting.
+  Task      198 on host nid001178 reporting.
+  Task      199 on host nid001178 reporting.
+  Task      200 on host nid001178 reporting.
+  Task      201 on host nid001178 reporting.
+  Task      202 on host nid001178 reporting.
+  Task      203 on host nid001178 reporting.
+  Task      204 on host nid001178 reporting.
+  Task      205 on host nid001178 reporting.
+  Task      206 on host nid001178 reporting.
+  Task      207 on host nid001178 reporting.
+  Task      208 on host nid001178 reporting.
+  Task      209 on host nid001178 reporting.
+  Task      210 on host nid001178 reporting.
+  Task      211 on host nid001178 reporting.
+  Task      212 on host nid001178 reporting.
+  Task      213 on host nid001178 reporting.
+  Task      214 on host nid001178 reporting.
+  Task      215 on host nid001178 reporting.
+  Task      216 on host nid001178 reporting.
+  Task      217 on host nid001178 reporting.
+  Task      218 on host nid001178 reporting.
+  Task      219 on host nid001178 reporting.
+  Task      220 on host nid001178 reporting.
+  Task      221 on host nid001178 reporting.
+  Task      222 on host nid001178 reporting.
+  Task      223 on host nid001178 reporting.
+  Task      224 on host nid001178 reporting.
+  Task      225 on host nid001178 reporting.
+  Task      226 on host nid001178 reporting.
+  Task      227 on host nid001178 reporting.
+  Task      228 on host nid001178 reporting.
+  Task      229 on host nid001178 reporting.
+  Task      230 on host nid001178 reporting.
+  Task      231 on host nid001178 reporting.
+  Task      232 on host nid001178 reporting.
+  Task      233 on host nid001178 reporting.
+  Task      234 on host nid001178 reporting.
+  Task      235 on host nid001178 reporting.
+  Task      236 on host nid001178 reporting.
+  Task      237 on host nid001178 reporting.
+  Task      238 on host nid001178 reporting.
+  Task      239 on host nid001178 reporting.
+  Task      240 on host nid001178 reporting.
+  Task      241 on host nid001178 reporting.
+  Task      242 on host nid001178 reporting.
+  Task      243 on host nid001178 reporting.
+  Task      244 on host nid001178 reporting.
+  Task      245 on host nid001178 reporting.
+  Task      246 on host nid001178 reporting.
+  Task      247 on host nid001178 reporting.
+  Task      248 on host nid001178 reporting.
+  Task      249 on host nid001178 reporting.
+  Task      250 on host nid001178 reporting.
+  Task      251 on host nid001178 reporting.
+  Task      252 on host nid001178 reporting.
+  Task      253 on host nid001178 reporting.
+  Task      254 on host nid001178 reporting.
+  Task      255 on host nid001178 reporting.
+
+  Obtaining array dimensions for all initial allocations:
+  
+  -----------------------------------------------------------------------
+  Parsing control.in (first pass over file, find array dimensions only).
+  The contents of control.in will be repeated verbatim below
+  unless switched off by setting 'verbatim_writeout .false.' .
+  in the first line of control.in .
+  -----------------------------------------------------------------------
+  
+  #===============================================================================
+  # Created using the Atomic Simulation Environment (ASE)
+  
+  # Sat Jun 28 16:14:54 2025
+  
+  #===============================================================================
+  xc                                 PBE
+  relativistic                       atomic_zora scalar
+  occupation_type                    gaussian 0.01
+  mixer                              pulay
+  KS_method                          parallel
+  RI_method                          LVL
+  n_max_pulay                        10
+  collect_eigenvectors               .true.
+  density_update_method              density_matrix
+  lmo_pm_charge_metric               mulliken
+  atomic_solver_xc                   PBE
+  basis_threshold                    1e-05
+  override_illconditioning           .true.
+  override_initial_charge_check      .true.
+  frequency_points                   50
+  use_2d_corr                        .false.
+  total_energy_method                PBE
+  qm_embedding_mo_localise           .true.
+  qm_embedding_calc                  2
+  charge_mix_param                   0.0
+  sc_iter_limit                      0
+  charge                             -1.9999999999999893
+  #===============================================================================
+  
+  ################################################################################
+  #
+  #  FHI-aims code project
+  # Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+  #
+  #  Suggested "NAO-VCC-3Z" defaults for O atom (to be pasted into control.in file)
+  #
+  #  Please cite:
+  #
+  #  Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler,
+  #  "Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar"
+  #  New Journal of Physics 15, 123033 (2013).
+  #  http://dx.doi.org/10.1088/1367-2630/15/12/123033
+  #
+  ################################################################################
+    species        O
+  #     set basis set reference for FHI-aims output
+      cite_reference NAO-VCC-2013
+  #     global species definitions
+      nucleus             8
+      mass                15.9994
+  #
+      l_hartree           6
+  #
+      cut_pot             4.0  2.0  1.0
+      basis_dep_cutoff    0e-4
+  #
+      radial_base         36 7.0
+      radial_multiplier   2
+      angular_grids       specified
+        division   0.1817   50
+        division   0.3417  110
+        division   0.4949  194
+        division   0.6251  302
+        division   0.8014  434
+        division   0.8507  590
+  #      division   0.8762  770
+  #      division   0.9023  974
+  #      division   1.2339 1202
+  #      outer_grid 974
+        outer_grid 770
+  #      outer_grid  434
+  ################################################################################
+  #
+  #  Definition of "minimal" basis
+  #
+  ################################################################################
+  #     valence basis states
+      valence      2  s   2.
+      valence      2  p   4.
+  #     ion occupancy
+      ion_occ      2  s   1.
+      ion_occ      2  p   3.
+  ################################################################################
+  
+   basis_acc              1e-04
+  #============================================
+  # Optimization in      O for       NAO-VCC-3Z
+  #============================================
+  # (sp) correlation set
+   hydro     1     s      1.84877109
+   hydro     1     s      3.09577821
+   hydro     2     p      2.44895734
+   hydro     2     p      5.85722578
+  # polarization set
+   hydro     3     d      8.53701653
+   hydro     3     d      8.96275978
+   hydro     4     f     14.09619628
+  # (sp) enhanced minimal basis
+   hydro     1     s      3.62165559
+   hydro     1     s      5.97272514
+   hydro     2     p      6.29404180
+  ################################################################################
+  #
+  #  FHI-aims code project
+  #  Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+  #
+  #  Suggested "NAO-VCC-3Z" defaults for H atom (to be pasted into control.in file)
+  #
+  #  Please cite:
+  #
+  #  Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler,
+  #  "Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar"
+  #  New Journal of Physics 15, 123033 (2013).
+  #  http://dx.doi.org/10.1088/1367-2630/15/12/123033
+  #
+  ################################################################################
+    species        H
+  #     set basis set reference for FHI-aims output
+      cite_reference NAO-VCC-2013
+  #     global species definitions
+      nucleus             1
+      mass                1.00794
+  #
+      l_hartree           6
+  #
+      cut_pot             4.0  2.0  1.0
+      basis_dep_cutoff    0e-4
+  #
+      radial_base         24 7.0
+      radial_multiplier   2
+      angular_grids       specified
+        division   0.1930   50
+        division   0.3175  110
+        division   0.4293  194
+        division   0.5066  302
+        division   0.5626  434
+        division   0.5922  590
+  #      division   0.6227  974
+  #      division   0.6868 1202
+        outer_grid  770
+  #      outer_grid  434
+  ################################################################################
+  #
+  #  Definition of "minimal" basis
+  #
+  ################################################################################
+  #     valence basis states
+      valence      1  s   1.
+  #     ion occupancy
+      ion_occ      1  s   0.5
+  ################################################################################
+  
+  
+   basis_acc              1e-04
+  #============================================
+  # Optimization in      H for       NAO-VCC-3Z
+  #============================================
+  # (sp) correlation set
+   hydro     1     s      1.21957223
+   hydro     1     s      1.79015338
+   hydro     2     p      3.43862914
+   hydro     2     p      3.48684723
+  # polarization set
+   hydro     3     d      6.20828695
+  # (sp) enhanced minimal set
+   hydro     1     s      2.62768292
+  ################################################################################
+  #
+  #  FHI-aims code project
+  # Igor Ying Zhang and Xinguo Ren, Fritz Haber Institute Berlin, 2012
+  #
+  #  Suggested "NAO-VCC-3Z" defaults for C atom (to be pasted into control.in file)
+  #
+  #  Please cite:
+  #
+  #  Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler,
+  #  "Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar"
+  #  New Journal of Physics 15, 123033 (2013).
+  #  http://dx.doi.org/10.1088/1367-2630/15/12/123033
+  #
+  ################################################################################
+    species        C
+  #     set basis set reference for FHI-aims output
+      cite_reference NAO-VCC-2013
+  #     global species definitions
+      nucleus             6
+      mass                12.0107
+  #
+      l_hartree           6
+  #
+      cut_pot             4.0  2.0  1.0
+      basis_dep_cutoff    0e-4
+  #
+      radial_base         34 7.0
+      radial_multiplier   2
+      angular_grids       specified
+        division   0.2187   50
+        division   0.4416  110
+        division   0.6335  194
+        division   0.7727  302
+        division   0.8772  434
+        division   0.9334  590
+  #      division   0.9924  770
+  #      division   1.0230  974
+  #      division   1.5020 1202
+  #      outer_grid  974
+        outer_grid  770
+  #      outer_grid  434
+  ################################################################################
+  #
+  #  Definition of "minimal" basis
+  #
+  ################################################################################
+  #     valence basis states
+      valence      2  s   2.
+      valence      2  p   2.
+  #     ion occupancy
+      ion_occ      2  s   1.
+      ion_occ      2  p   1.
+  ################################################################################
+  
+   basis_acc              1e-04
+  #============================================
+  # Optimization in      C for       NAO-VCC-3Z
+  #============================================
+  # (sp) correlation set
+   hydro     1     s      1.80690099
+   hydro     1     s      3.25966754
+   hydro     2     p      1.97404286
+   hydro     2     p      3.16616778
+  # polarization set
+   hydro     3     d      5.89063938
+   hydro     3     d      6.67716137
+   hydro     4     f     10.14967498
+  # (sp) enhanced minimal set
+   hydro     1     s      6.77306992
+   hydro     1     s     13.85913422
+   hydro     2     p      3.64746093
+  
+  -----------------------------------------------------------------------
+  Completed first pass over input file control.in .
+  -----------------------------------------------------------------------
+  
+  
+  -----------------------------------------------------------------------
+  Parsing geometry.in (first pass over file, find array dimensions only).
+  The contents of geometry.in will be repeated verbatim below
+  unless switched off by setting 'verbatim_writeout .false.' .
+  in the first line of geometry.in .
+  -----------------------------------------------------------------------
+  
+  #===============================================================================
+  # Created using the Atomic Simulation Environment (ASE)
+  
+  # Sat Jun 28 16:14:54 2025
+  
+  #=======================================================
+  atom -3.1933375300000000 0.3497144000000000 -0.4689440100000000 O
+  qm_embedding_region 1
+  atom -3.9183712900000001 0.9651282100000000 -0.2817691500000000 H
+  qm_embedding_region 1
+  atom -4.3595134599999996 -1.7049052300000000 1.4432162799999999 O
+  qm_embedding_region 1
+  atom -3.9924159399999999 -1.1090525200000001 0.7498436300000000 H
+  qm_embedding_region 1
+  empty -0.8128345800000000 0.1014889500000000 -0.5568038000000000 C
+  qm_embedding_region 2
+  empty -1.9707255500000000 0.9467791500000000 -0.0397513200000000 C
+  qm_embedding_region 2
+  empty 0.5436867200000000 0.5975456400000000 -0.0756072400000000 C
+  qm_embedding_region 2
+  empty 3.0587007599999998 0.2264366800000000 -0.1075744500000000 C
+  qm_embedding_region 2
+  empty 3.2114893599999998 1.2951264000000000 -0.2879999900000000 H
+  qm_embedding_region 2
+  empty 1.6768659299999999 -0.1905345000000000 -1.7160308200000001 H
+  qm_embedding_region 2
+  empty 1.5371359099999999 -1.2866331400000000 -0.3432003900000000 H
+  qm_embedding_region 2
+  empty 0.6716459200000000 1.6464368899999999 -0.3792213000000000 H
+  qm_embedding_region 2
+  empty 0.5538656400000000 0.5791026600000000 1.0235432499999999 H
+  qm_embedding_region 2
+  empty -0.8251545800000000 0.0970587300000000 -1.6572795400000000 H
+  qm_embedding_region 2
+  empty 3.8573415400000002 -0.3187331500000000 -0.6157681699999999 H
+  qm_embedding_region 2
+  empty 1.7014955100000000 -0.2382674600000000 -0.6203453799999999 C
+  qm_embedding_region 2
+  empty -1.8907653400000000 1.9679501200000000 -0.4415566500000000 H
+  qm_embedding_region 2
+  empty -0.9398841800000000 -0.9421792100000000 -0.2312390000000000 H
+  qm_embedding_region 2
+  empty -4.6845105499999997 -7.8507389900000000 2.5391040399999998 C
+  qm_embedding_region 2
+  empty -1.9370053300000001 0.9855277900000000 1.0602262800000000 H
+  qm_embedding_region 2
+  empty -4.9447976200000001 -6.3895239899999998 2.8815860899999999 C
+  qm_embedding_region 2
+  empty -4.5689247899999996 -5.4397207300000003 1.7433153400000001 C
+  qm_embedding_region 2
+  empty -4.7738726199999997 -3.9732622100000001 2.0937187399999999 C
+  qm_embedding_region 2
+  empty -4.2734860000000001 -3.0275456400000000 0.9967403700000000 C
+  qm_embedding_region 2
+  empty -4.9300196999999999 -8.4848734300000004 3.3940723899999998 H
+  qm_embedding_region 2
+  empty -5.2952672999999999 -8.1754948600000006 1.6906695100000000 H
+  qm_embedding_region 2
+  empty -3.6319166200000002 -8.0147405999999997 2.2870404899999999 H
+  qm_embedding_region 2
+  empty -4.3709652500000002 -6.1047659400000001 3.7718493500000001 H
+  qm_embedding_region 2
+  empty -6.0040426199999999 -6.2421081999999997 3.1224893699999998 H
+  qm_embedding_region 2
+  empty -3.5150274399999999 -5.5961320199999998 1.4721294500000000 H
+  qm_embedding_region 2
+  empty -5.1672109199999996 -5.6798084500000003 0.8526411400000000 H
+  qm_embedding_region 2
+  empty 3.1586409500000001 0.0431947600000000 0.9672149000000000 H
+  qm_embedding_region 2
+  empty -4.2535942499999999 -3.7521138500000002 3.0373312900000000 H
+  qm_embedding_region 2
+  empty -5.8461641899999996 -3.7893040700000000 2.2593167599999999 H
+  qm_embedding_region 2
+  empty -3.2297188399999999 -3.2888903300000001 0.7496481500000000 H
+  qm_embedding_region 2
+  empty -4.8928751699999999 -3.1732709600000000 0.0951177300000000 H
+  qm_embedding_region 2
+  
+  -----------------------------------------------------------------------
+  Completed first pass over input file geometry.in .
+  -----------------------------------------------------------------------
+  
+
+  Basic array size parameters:
+  | Number of species                 :        3
+  | Number of atoms                   :       36
+  | Max. basis fn. angular momentum   :        3
+  | Max. atomic/ionic basis occupied n:        2
+  | Max. number of basis fn. types    :        2
+  | Max. radial fns per species/type  :       10
+  | Max. logarithmic grid size        :     1301
+  | Max. radial integration grid size :       73
+  | Max. angular integration grid size:      770
+  | Max. angular grid division number :        8
+  | Radial grid for Hartree potential :     1301
+  | Number of spin channels           :        1
+
+  Definition of standardized fundamental physical constants in this FHI-aims run:
+  | Using the set of values used in FHI-aims up to 2024, which combines values from
+  | different CODATA sets - see constants.f90.
+  | Use the 'codata' keyword in control.in to change this selection.
+
+  Memory overcommitment is allowed on your operating system.
+
+------------------------------------------------------------
+          Reading file control.in.
+------------------------------------------------------------
+  XC: Using PBE gradient-corrected functionals.
+  Scalar relativistic treatment of kinetic energy: on-site free-atom approximation to ZORA.
+  Occupation type: Gaussian broadening, width =   0.100000E-01 eV.
+  Using pulay charge density mixing.
+  Kohn-Sham electronic structure solved by the ELSI library.
+  The 'LVL' version of RI (resolution of identity) technique is used.
+  ** This is a localized expansion of all basis function products.
+     Its intended use are Hartree-Fock and hybrid functionals.
+     For RPA, MP2, GW, etc., LVL is not yet as accurate. In those cases, check carefully.
+  Pulay mixing - number of memorized iterations:   10
+  MO localisation with PM objective function calculated with Mulliken charges
+  Atomic Solver XC: Using user-defined functional for generating the minimal NAO basis functions.
+  Note that only the following functionals are available: kli, pz-lda, pw-lda, vwn, vwn-gauss, pw91_gga, pbe, rpbe, revpbe, pbeint, blyp.
+  Threshold for basis singularities:  0.1000E-04
+  override_illconditioning: Explicitly overriding any built-in checks for an ill-conditioned overlap matrix.
+** WARNING:
+  ***  If you use this flag, you should really know what you are doing.
+** END OF WARNING
+** WARNING:
+  *** DO NOT keep this flag set by default in all your control.in files.
+** END OF WARNING
+  Number of frequency points used for the self-energy calculation:     50
+  Old 1D distribution for correlation code.
+  Post-SCF XC: Using PBE gradient-corrected functionals.
+  Post SCF calculation will be started after the DFT/HF calculation.
+  Charge density mixing - mixing parameter:     0.0000
+ * Warning: The chosen 'charge_mix_param' value is not between zero or one.
+ * The value found in control.in will likely lead to no s.c.f. convergence: 
+ charge_mix_param                   0.0                                                                                                                                                                                                                    
+ * Please check. 
+  Maximum number of s.-c. iterations  :     0
+  Charged system requested: Charge =  -0.200000E+01.
+
+  Reading configuration options for species O                   .
+  | Found nuclear charge :   8.0000
+  | Found atomic mass :    15.999400000000000      amu
+  | Found l_max for Hartree potential  :   6
+  | Found cutoff potl. onset [A], width [A], scale factor :    4.00000    2.00000    1.00000
+  | Threshold for basis-dependent cutoff potential is   0.000000E+00
+  | Found data for basic radial integration grid :    36 points, outermost radius =    7.000 A
+  | Found multiplier for basic radial grid :   2
+  | Found angular grid specification: user-specified.
+  | Specified grid contains     7 separate shells.
+  | Check grid settings after all constraints further below.
+  | Found free-atom valence shell :  2 s   2.000
+  | Found free-atom valence shell :  2 p   4.000
+  | No ionic wave fns used. Skipping ion_occ.
+  | No ionic wave fns used. Skipping ion_occ.
+  | Found basis singularity cutoff : 0.1000E-03
+  | Found hydrogenic basis function :  1 s   1.849
+  | Found hydrogenic basis function :  1 s   3.096
+  | Found hydrogenic basis function :  2 p   2.449
+  | Found hydrogenic basis function :  2 p   5.857
+  | Found hydrogenic basis function :  3 d   8.537
+  | Found hydrogenic basis function :  3 d   8.963
+  | Found hydrogenic basis function :  4 f  14.096
+  | Found hydrogenic basis function :  1 s   3.622
+  | Found hydrogenic basis function :  1 s   5.973
+  | Found hydrogenic basis function :  2 p   6.294
+ | Encountered keyword species, ending the description of species O                   .
+  Species O                   : Missing cutoff potential type.
+  Defaulting to exp(1/x)/(1-x)^2 type cutoff potential.
+  Species O : No 'logarithmic' tag. Using default grid for free atom:
+  | Default logarithmic grid data [bohr] : 0.1000E-03 0.1000E+03 0.1012E+01
+  Species O                   : Using default innermost maximum threshold i_radial=  2 for radial functions.
+  Species O                   : Default cutoff onset for free atom density etc. : 0.40000000E+01 AA.
+  Species O                   : Basic radial grid will be enhanced according to radial_multiplier =   2, to contain    73 grid points.
+
+  Reading configuration options for species H                   .
+  | Found nuclear charge :   1.0000
+  | Found atomic mass :    1.0079400000000001      amu
+  | Found l_max for Hartree potential  :   6
+  | Found cutoff potl. onset [A], width [A], scale factor :    4.00000    2.00000    1.00000
+  | Threshold for basis-dependent cutoff potential is   0.000000E+00
+  | Found data for basic radial integration grid :    24 points, outermost radius =    7.000 A
+  | Found multiplier for basic radial grid :   2
+  | Found angular grid specification: user-specified.
+  | Specified grid contains     7 separate shells.
+  | Check grid settings after all constraints further below.
+  | Found free-atom valence shell :  1 s   1.000
+  | No ionic wave fns used. Skipping ion_occ.
+  | Found basis singularity cutoff : 0.1000E-03
+  | Found hydrogenic basis function :  1 s   1.220
+  | Found hydrogenic basis function :  1 s   1.790
+  | Found hydrogenic basis function :  2 p   3.439
+  | Found hydrogenic basis function :  2 p   3.487
+  | Found hydrogenic basis function :  3 d   6.208
+  | Found hydrogenic basis function :  1 s   2.628
+ | Encountered keyword species, ending the description of species H                   .
+  Species H                   : Missing cutoff potential type.
+  Defaulting to exp(1/x)/(1-x)^2 type cutoff potential.
+  Species H : No 'logarithmic' tag. Using default grid for free atom:
+  | Default logarithmic grid data [bohr] : 0.1000E-03 0.1000E+03 0.1012E+01
+  Species H                   : Using default innermost maximum threshold i_radial=  2 for radial functions.
+  Species H                   : Default cutoff onset for free atom density etc. : 0.40000000E+01 AA.
+  Species H                   : Basic radial grid will be enhanced according to radial_multiplier =   2, to contain    49 grid points.
+
+  Reading configuration options for species C                   .
+  | Found nuclear charge :   6.0000
+  | Found atomic mass :    12.010700000000000      amu
+  | Found l_max for Hartree potential  :   6
+  | Found cutoff potl. onset [A], width [A], scale factor :    4.00000    2.00000    1.00000
+  | Threshold for basis-dependent cutoff potential is   0.000000E+00
+  | Found data for basic radial integration grid :    34 points, outermost radius =    7.000 A
+  | Found multiplier for basic radial grid :   2
+  | Found angular grid specification: user-specified.
+  | Specified grid contains     7 separate shells.
+  | Check grid settings after all constraints further below.
+  | Found free-atom valence shell :  2 s   2.000
+  | Found free-atom valence shell :  2 p   2.000
+  | No ionic wave fns used. Skipping ion_occ.
+  | No ionic wave fns used. Skipping ion_occ.
+  | Found basis singularity cutoff : 0.1000E-03
+  | Found hydrogenic basis function :  1 s   1.807
+  | Found hydrogenic basis function :  1 s   3.260
+  | Found hydrogenic basis function :  2 p   1.974
+  | Found hydrogenic basis function :  2 p   3.166
+  | Found hydrogenic basis function :  3 d   5.891
+  | Found hydrogenic basis function :  3 d   6.677
+  | Found hydrogenic basis function :  4 f  10.150
+  | Found hydrogenic basis function :  1 s   6.773
+  | Found hydrogenic basis function :  1 s  13.859
+  | Found hydrogenic basis function :  2 p   3.647
+  Species C                   : Missing cutoff potential type.
+  Defaulting to exp(1/x)/(1-x)^2 type cutoff potential.
+  Species C : No 'logarithmic' tag. Using default grid for free atom:
+  | Default logarithmic grid data [bohr] : 0.1000E-03 0.1000E+03 0.1012E+01
+  Species C                   : Using default innermost maximum threshold i_radial=  2 for radial functions.
+  Species C                   : Default cutoff onset for free atom density etc. : 0.40000000E+01 AA.
+  Species C                   : Basic radial grid will be enhanced according to radial_multiplier =   2, to contain    69 grid points.
+
+  Finished reading input file 'control.in'.
+
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+          Reading geometry description geometry.in.
+------------------------------------------------------------
+  | The smallest distance between any two atoms is         0.96924844 AA.
+  | The first atom of this pair is atom number                      1 .
+  | The second atom of this pair is atom number                     2 .
+  Input structure read successfully.
+  The structure contains       36 atoms,  and a total of         20.000 electrons.
+
+  Input geometry:
+  | No unit cell requested.
+  | Atomic structure:
+  |       Atom                x [A]            y [A]            z [A]
+  |    1: Species O            -3.19333753        0.34971440       -0.46894401
+  |    2: Species H            -3.91837129        0.96512821       -0.28176915
+  |    3: Species O            -4.35951346       -1.70490523        1.44321628
+  |    4: Species H            -3.99241594       -1.10905252        0.74984363
+  |       Ghost               x [A]            y [A]            z [A]
+  |    5: Species C        -0.81283458        0.10148895       -0.55680380
+  |    6: Species C        -1.97072555        0.94677915       -0.03975132
+  |    7: Species C         0.54368672        0.59754564       -0.07560724
+  |    8: Species C         3.05870076        0.22643668       -0.10757445
+  |    9: Species H         3.21148936        1.29512640       -0.28799999
+  |   10: Species H         1.67686593       -0.19053450       -1.71603082
+  |   11: Species H         1.53713591       -1.28663314       -0.34320039
+  |   12: Species H         0.67164592        1.64643689       -0.37922130
+  |   13: Species H         0.55386564        0.57910266        1.02354325
+  |   14: Species H        -0.82515458        0.09705873       -1.65727954
+  |   15: Species H         3.85734154       -0.31873315       -0.61576817
+  |   16: Species C         1.70149551       -0.23826746       -0.62034538
+  |   17: Species H        -1.89076534        1.96795012       -0.44155665
+  |   18: Species H        -0.93988418       -0.94217921       -0.23123900
+  |   19: Species C        -4.68451055       -7.85073899        2.53910404
+  |   20: Species H        -1.93700533        0.98552779        1.06022628
+  |   21: Species C        -4.94479762       -6.38952399        2.88158609
+  |   22: Species C        -4.56892479       -5.43972073        1.74331534
+  |   23: Species C        -4.77387262       -3.97326221        2.09371874
+  |   24: Species C        -4.27348600       -3.02754564        0.99674037
+  |   25: Species H        -4.93001970       -8.48487343        3.39407239
+  |   26: Species H        -5.29526730       -8.17549486        1.69066951
+  |   27: Species H        -3.63191662       -8.01474060        2.28704049
+  |   28: Species H        -4.37096525       -6.10476594        3.77184935
+  |   29: Species H        -6.00404262       -6.24210820        3.12248937
+  |   30: Species H        -3.51502744       -5.59613202        1.47212945
+  |   31: Species H        -5.16721092       -5.67980845        0.85264114
+  |   32: Species H         3.15864095        0.04319476        0.96721490
+  |   33: Species H        -4.25359425       -3.75211385        3.03733129
+  |   34: Species H        -5.84616419       -3.78930407        2.25931676
+  |   35: Species H        -3.22971884       -3.28889033        0.74964815
+  |   36: Species H        -4.89287517       -3.17327096        0.09511773
+
+  Slab Identifier: This is not a periodic structure.
+
+  Finished reading input file 'geometry.in'.
+
+
+
+  Consistency checks for stacksize environment parameter are next.
+
+  | Maximum stacksize for task 0: unlimited
+  | Maximum stacksize for task 1: unlimited
+  | Maximum stacksize for task 2: unlimited
+  | Maximum stacksize for task 3: unlimited
+  | Maximum stacksize for task 4: unlimited
+  | Maximum stacksize for task 5: unlimited
+  | Maximum stacksize for task 6: unlimited
+  | Maximum stacksize for task 7: unlimited
+  | Maximum stacksize for task 8: unlimited
+  | Maximum stacksize for task 9: unlimited
+  | Maximum stacksize for task 10: unlimited
+  | Maximum stacksize for task 11: unlimited
+  | Maximum stacksize for task 12: unlimited
+  | Maximum stacksize for task 13: unlimited
+  | Maximum stacksize for task 14: unlimited
+  | Maximum stacksize for task 15: unlimited
+  | Maximum stacksize for task 16: unlimited
+  | Maximum stacksize for task 17: unlimited
+  | Maximum stacksize for task 18: unlimited
+  | Maximum stacksize for task 19: unlimited
+  | Maximum stacksize for task 20: unlimited
+  | Maximum stacksize for task 21: unlimited
+  | Maximum stacksize for task 22: unlimited
+  | Maximum stacksize for task 23: unlimited
+  | Maximum stacksize for task 24: unlimited
+  | Maximum stacksize for task 25: unlimited
+  | Maximum stacksize for task 26: unlimited
+  | Maximum stacksize for task 27: unlimited
+  | Maximum stacksize for task 28: unlimited
+  | Maximum stacksize for task 29: unlimited
+  | Maximum stacksize for task 30: unlimited
+  | Maximum stacksize for task 31: unlimited
+  | Maximum stacksize for task 32: unlimited
+  | Maximum stacksize for task 33: unlimited
+  | Maximum stacksize for task 34: unlimited
+  | Maximum stacksize for task 35: unlimited
+  | Maximum stacksize for task 36: unlimited
+  | Maximum stacksize for task 37: unlimited
+  | Maximum stacksize for task 38: unlimited
+  | Maximum stacksize for task 39: unlimited
+  | Maximum stacksize for task 40: unlimited
+  | Maximum stacksize for task 41: unlimited
+  | Maximum stacksize for task 42: unlimited
+  | Maximum stacksize for task 43: unlimited
+  | Maximum stacksize for task 44: unlimited
+  | Maximum stacksize for task 45: unlimited
+  | Maximum stacksize for task 46: unlimited
+  | Maximum stacksize for task 47: unlimited
+  | Maximum stacksize for task 48: unlimited
+  | Maximum stacksize for task 49: unlimited
+  | Maximum stacksize for task 50: unlimited
+  | Maximum stacksize for task 51: unlimited
+  | Maximum stacksize for task 52: unlimited
+  | Maximum stacksize for task 53: unlimited
+  | Maximum stacksize for task 54: unlimited
+  | Maximum stacksize for task 55: unlimited
+  | Maximum stacksize for task 56: unlimited
+  | Maximum stacksize for task 57: unlimited
+  | Maximum stacksize for task 58: unlimited
+  | Maximum stacksize for task 59: unlimited
+  | Maximum stacksize for task 60: unlimited
+  | Maximum stacksize for task 61: unlimited
+  | Maximum stacksize for task 62: unlimited
+  | Maximum stacksize for task 63: unlimited
+  | Maximum stacksize for task 64: unlimited
+  | Maximum stacksize for task 65: unlimited
+  | Maximum stacksize for task 66: unlimited
+  | Maximum stacksize for task 67: unlimited
+  | Maximum stacksize for task 68: unlimited
+  | Maximum stacksize for task 69: unlimited
+  | Maximum stacksize for task 70: unlimited
+  | Maximum stacksize for task 71: unlimited
+  | Maximum stacksize for task 72: unlimited
+  | Maximum stacksize for task 73: unlimited
+  | Maximum stacksize for task 74: unlimited
+  | Maximum stacksize for task 75: unlimited
+  | Maximum stacksize for task 76: unlimited
+  | Maximum stacksize for task 77: unlimited
+  | Maximum stacksize for task 78: unlimited
+  | Maximum stacksize for task 79: unlimited
+  | Maximum stacksize for task 80: unlimited
+  | Maximum stacksize for task 81: unlimited
+  | Maximum stacksize for task 82: unlimited
+  | Maximum stacksize for task 83: unlimited
+  | Maximum stacksize for task 84: unlimited
+  | Maximum stacksize for task 85: unlimited
+  | Maximum stacksize for task 86: unlimited
+  | Maximum stacksize for task 87: unlimited
+  | Maximum stacksize for task 88: unlimited
+  | Maximum stacksize for task 89: unlimited
+  | Maximum stacksize for task 90: unlimited
+  | Maximum stacksize for task 91: unlimited
+  | Maximum stacksize for task 92: unlimited
+  | Maximum stacksize for task 93: unlimited
+  | Maximum stacksize for task 94: unlimited
+  | Maximum stacksize for task 95: unlimited
+  | Maximum stacksize for task 96: unlimited
+  | Maximum stacksize for task 97: unlimited
+  | Maximum stacksize for task 98: unlimited
+  | Maximum stacksize for task 99: unlimited
+  | Maximum stacksize for task 100: unlimited
+  | Maximum stacksize for task 101: unlimited
+  | Maximum stacksize for task 102: unlimited
+  | Maximum stacksize for task 103: unlimited
+  | Maximum stacksize for task 104: unlimited
+  | Maximum stacksize for task 105: unlimited
+  | Maximum stacksize for task 106: unlimited
+  | Maximum stacksize for task 107: unlimited
+  | Maximum stacksize for task 108: unlimited
+  | Maximum stacksize for task 109: unlimited
+  | Maximum stacksize for task 110: unlimited
+  | Maximum stacksize for task 111: unlimited
+  | Maximum stacksize for task 112: unlimited
+  | Maximum stacksize for task 113: unlimited
+  | Maximum stacksize for task 114: unlimited
+  | Maximum stacksize for task 115: unlimited
+  | Maximum stacksize for task 116: unlimited
+  | Maximum stacksize for task 117: unlimited
+  | Maximum stacksize for task 118: unlimited
+  | Maximum stacksize for task 119: unlimited
+  | Maximum stacksize for task 120: unlimited
+  | Maximum stacksize for task 121: unlimited
+  | Maximum stacksize for task 122: unlimited
+  | Maximum stacksize for task 123: unlimited
+  | Maximum stacksize for task 124: unlimited
+  | Maximum stacksize for task 125: unlimited
+  | Maximum stacksize for task 126: unlimited
+  | Maximum stacksize for task 127: unlimited
+  | Maximum stacksize for task 128: unlimited
+  | Maximum stacksize for task 129: unlimited
+  | Maximum stacksize for task 130: unlimited
+  | Maximum stacksize for task 131: unlimited
+  | Maximum stacksize for task 132: unlimited
+  | Maximum stacksize for task 133: unlimited
+  | Maximum stacksize for task 134: unlimited
+  | Maximum stacksize for task 135: unlimited
+  | Maximum stacksize for task 136: unlimited
+  | Maximum stacksize for task 137: unlimited
+  | Maximum stacksize for task 138: unlimited
+  | Maximum stacksize for task 139: unlimited
+  | Maximum stacksize for task 140: unlimited
+  | Maximum stacksize for task 141: unlimited
+  | Maximum stacksize for task 142: unlimited
+  | Maximum stacksize for task 143: unlimited
+  | Maximum stacksize for task 144: unlimited
+  | Maximum stacksize for task 145: unlimited
+  | Maximum stacksize for task 146: unlimited
+  | Maximum stacksize for task 147: unlimited
+  | Maximum stacksize for task 148: unlimited
+  | Maximum stacksize for task 149: unlimited
+  | Maximum stacksize for task 150: unlimited
+  | Maximum stacksize for task 151: unlimited
+  | Maximum stacksize for task 152: unlimited
+  | Maximum stacksize for task 153: unlimited
+  | Maximum stacksize for task 154: unlimited
+  | Maximum stacksize for task 155: unlimited
+  | Maximum stacksize for task 156: unlimited
+  | Maximum stacksize for task 157: unlimited
+  | Maximum stacksize for task 158: unlimited
+  | Maximum stacksize for task 159: unlimited
+  | Maximum stacksize for task 160: unlimited
+  | Maximum stacksize for task 161: unlimited
+  | Maximum stacksize for task 162: unlimited
+  | Maximum stacksize for task 163: unlimited
+  | Maximum stacksize for task 164: unlimited
+  | Maximum stacksize for task 165: unlimited
+  | Maximum stacksize for task 166: unlimited
+  | Maximum stacksize for task 167: unlimited
+  | Maximum stacksize for task 168: unlimited
+  | Maximum stacksize for task 169: unlimited
+  | Maximum stacksize for task 170: unlimited
+  | Maximum stacksize for task 171: unlimited
+  | Maximum stacksize for task 172: unlimited
+  | Maximum stacksize for task 173: unlimited
+  | Maximum stacksize for task 174: unlimited
+  | Maximum stacksize for task 175: unlimited
+  | Maximum stacksize for task 176: unlimited
+  | Maximum stacksize for task 177: unlimited
+  | Maximum stacksize for task 178: unlimited
+  | Maximum stacksize for task 179: unlimited
+  | Maximum stacksize for task 180: unlimited
+  | Maximum stacksize for task 181: unlimited
+  | Maximum stacksize for task 182: unlimited
+  | Maximum stacksize for task 183: unlimited
+  | Maximum stacksize for task 184: unlimited
+  | Maximum stacksize for task 185: unlimited
+  | Maximum stacksize for task 186: unlimited
+  | Maximum stacksize for task 187: unlimited
+  | Maximum stacksize for task 188: unlimited
+  | Maximum stacksize for task 189: unlimited
+  | Maximum stacksize for task 190: unlimited
+  | Maximum stacksize for task 191: unlimited
+  | Maximum stacksize for task 192: unlimited
+  | Maximum stacksize for task 193: unlimited
+  | Maximum stacksize for task 194: unlimited
+  | Maximum stacksize for task 195: unlimited
+  | Maximum stacksize for task 196: unlimited
+  | Maximum stacksize for task 197: unlimited
+  | Maximum stacksize for task 198: unlimited
+  | Maximum stacksize for task 199: unlimited
+  | Maximum stacksize for task 200: unlimited
+  | Maximum stacksize for task 201: unlimited
+  | Maximum stacksize for task 202: unlimited
+  | Maximum stacksize for task 203: unlimited
+  | Maximum stacksize for task 204: unlimited
+  | Maximum stacksize for task 205: unlimited
+  | Maximum stacksize for task 206: unlimited
+  | Maximum stacksize for task 207: unlimited
+  | Maximum stacksize for task 208: unlimited
+  | Maximum stacksize for task 209: unlimited
+  | Maximum stacksize for task 210: unlimited
+  | Maximum stacksize for task 211: unlimited
+  | Maximum stacksize for task 212: unlimited
+  | Maximum stacksize for task 213: unlimited
+  | Maximum stacksize for task 214: unlimited
+  | Maximum stacksize for task 215: unlimited
+  | Maximum stacksize for task 216: unlimited
+  | Maximum stacksize for task 217: unlimited
+  | Maximum stacksize for task 218: unlimited
+  | Maximum stacksize for task 219: unlimited
+  | Maximum stacksize for task 220: unlimited
+  | Maximum stacksize for task 221: unlimited
+  | Maximum stacksize for task 222: unlimited
+  | Maximum stacksize for task 223: unlimited
+  | Maximum stacksize for task 224: unlimited
+  | Maximum stacksize for task 225: unlimited
+  | Maximum stacksize for task 226: unlimited
+  | Maximum stacksize for task 227: unlimited
+  | Maximum stacksize for task 228: unlimited
+  | Maximum stacksize for task 229: unlimited
+  | Maximum stacksize for task 230: unlimited
+  | Maximum stacksize for task 231: unlimited
+  | Maximum stacksize for task 232: unlimited
+  | Maximum stacksize for task 233: unlimited
+  | Maximum stacksize for task 234: unlimited
+  | Maximum stacksize for task 235: unlimited
+  | Maximum stacksize for task 236: unlimited
+  | Maximum stacksize for task 237: unlimited
+  | Maximum stacksize for task 238: unlimited
+  | Maximum stacksize for task 239: unlimited
+  | Maximum stacksize for task 240: unlimited
+  | Maximum stacksize for task 241: unlimited
+  | Maximum stacksize for task 242: unlimited
+  | Maximum stacksize for task 243: unlimited
+  | Maximum stacksize for task 244: unlimited
+  | Maximum stacksize for task 245: unlimited
+  | Maximum stacksize for task 246: unlimited
+  | Maximum stacksize for task 247: unlimited
+  | Maximum stacksize for task 248: unlimited
+  | Maximum stacksize for task 249: unlimited
+  | Maximum stacksize for task 250: unlimited
+  | Maximum stacksize for task 251: unlimited
+  | Maximum stacksize for task 252: unlimited
+  | Maximum stacksize for task 253: unlimited
+  | Maximum stacksize for task 254: unlimited
+  | Maximum stacksize for task 255: unlimited
+  | Current stacksize for task 0: unlimited
+  | Current stacksize for task 1: unlimited
+  | Current stacksize for task 2: unlimited
+  | Current stacksize for task 3: unlimited
+  | Current stacksize for task 4: unlimited
+  | Current stacksize for task 5: unlimited
+  | Current stacksize for task 6: unlimited
+  | Current stacksize for task 7: unlimited
+  | Current stacksize for task 8: unlimited
+  | Current stacksize for task 9: unlimited
+  | Current stacksize for task 10: unlimited
+  | Current stacksize for task 11: unlimited
+  | Current stacksize for task 12: unlimited
+  | Current stacksize for task 13: unlimited
+  | Current stacksize for task 14: unlimited
+  | Current stacksize for task 15: unlimited
+  | Current stacksize for task 16: unlimited
+  | Current stacksize for task 17: unlimited
+  | Current stacksize for task 18: unlimited
+  | Current stacksize for task 19: unlimited
+  | Current stacksize for task 20: unlimited
+  | Current stacksize for task 21: unlimited
+  | Current stacksize for task 22: unlimited
+  | Current stacksize for task 23: unlimited
+  | Current stacksize for task 24: unlimited
+  | Current stacksize for task 25: unlimited
+  | Current stacksize for task 26: unlimited
+  | Current stacksize for task 27: unlimited
+  | Current stacksize for task 28: unlimited
+  | Current stacksize for task 29: unlimited
+  | Current stacksize for task 30: unlimited
+  | Current stacksize for task 31: unlimited
+  | Current stacksize for task 32: unlimited
+  | Current stacksize for task 33: unlimited
+  | Current stacksize for task 34: unlimited
+  | Current stacksize for task 35: unlimited
+  | Current stacksize for task 36: unlimited
+  | Current stacksize for task 37: unlimited
+  | Current stacksize for task 38: unlimited
+  | Current stacksize for task 39: unlimited
+  | Current stacksize for task 40: unlimited
+  | Current stacksize for task 41: unlimited
+  | Current stacksize for task 42: unlimited
+  | Current stacksize for task 43: unlimited
+  | Current stacksize for task 44: unlimited
+  | Current stacksize for task 45: unlimited
+  | Current stacksize for task 46: unlimited
+  | Current stacksize for task 47: unlimited
+  | Current stacksize for task 48: unlimited
+  | Current stacksize for task 49: unlimited
+  | Current stacksize for task 50: unlimited
+  | Current stacksize for task 51: unlimited
+  | Current stacksize for task 52: unlimited
+  | Current stacksize for task 53: unlimited
+  | Current stacksize for task 54: unlimited
+  | Current stacksize for task 55: unlimited
+  | Current stacksize for task 56: unlimited
+  | Current stacksize for task 57: unlimited
+  | Current stacksize for task 58: unlimited
+  | Current stacksize for task 59: unlimited
+  | Current stacksize for task 60: unlimited
+  | Current stacksize for task 61: unlimited
+  | Current stacksize for task 62: unlimited
+  | Current stacksize for task 63: unlimited
+  | Current stacksize for task 64: unlimited
+  | Current stacksize for task 65: unlimited
+  | Current stacksize for task 66: unlimited
+  | Current stacksize for task 67: unlimited
+  | Current stacksize for task 68: unlimited
+  | Current stacksize for task 69: unlimited
+  | Current stacksize for task 70: unlimited
+  | Current stacksize for task 71: unlimited
+  | Current stacksize for task 72: unlimited
+  | Current stacksize for task 73: unlimited
+  | Current stacksize for task 74: unlimited
+  | Current stacksize for task 75: unlimited
+  | Current stacksize for task 76: unlimited
+  | Current stacksize for task 77: unlimited
+  | Current stacksize for task 78: unlimited
+  | Current stacksize for task 79: unlimited
+  | Current stacksize for task 80: unlimited
+  | Current stacksize for task 81: unlimited
+  | Current stacksize for task 82: unlimited
+  | Current stacksize for task 83: unlimited
+  | Current stacksize for task 84: unlimited
+  | Current stacksize for task 85: unlimited
+  | Current stacksize for task 86: unlimited
+  | Current stacksize for task 87: unlimited
+  | Current stacksize for task 88: unlimited
+  | Current stacksize for task 89: unlimited
+  | Current stacksize for task 90: unlimited
+  | Current stacksize for task 91: unlimited
+  | Current stacksize for task 92: unlimited
+  | Current stacksize for task 93: unlimited
+  | Current stacksize for task 94: unlimited
+  | Current stacksize for task 95: unlimited
+  | Current stacksize for task 96: unlimited
+  | Current stacksize for task 97: unlimited
+  | Current stacksize for task 98: unlimited
+  | Current stacksize for task 99: unlimited
+  | Current stacksize for task 100: unlimited
+  | Current stacksize for task 101: unlimited
+  | Current stacksize for task 102: unlimited
+  | Current stacksize for task 103: unlimited
+  | Current stacksize for task 104: unlimited
+  | Current stacksize for task 105: unlimited
+  | Current stacksize for task 106: unlimited
+  | Current stacksize for task 107: unlimited
+  | Current stacksize for task 108: unlimited
+  | Current stacksize for task 109: unlimited
+  | Current stacksize for task 110: unlimited
+  | Current stacksize for task 111: unlimited
+  | Current stacksize for task 112: unlimited
+  | Current stacksize for task 113: unlimited
+  | Current stacksize for task 114: unlimited
+  | Current stacksize for task 115: unlimited
+  | Current stacksize for task 116: unlimited
+  | Current stacksize for task 117: unlimited
+  | Current stacksize for task 118: unlimited
+  | Current stacksize for task 119: unlimited
+  | Current stacksize for task 120: unlimited
+  | Current stacksize for task 121: unlimited
+  | Current stacksize for task 122: unlimited
+  | Current stacksize for task 123: unlimited
+  | Current stacksize for task 124: unlimited
+  | Current stacksize for task 125: unlimited
+  | Current stacksize for task 126: unlimited
+  | Current stacksize for task 127: unlimited
+  | Current stacksize for task 128: unlimited
+  | Current stacksize for task 129: unlimited
+  | Current stacksize for task 130: unlimited
+  | Current stacksize for task 131: unlimited
+  | Current stacksize for task 132: unlimited
+  | Current stacksize for task 133: unlimited
+  | Current stacksize for task 134: unlimited
+  | Current stacksize for task 135: unlimited
+  | Current stacksize for task 136: unlimited
+  | Current stacksize for task 137: unlimited
+  | Current stacksize for task 138: unlimited
+  | Current stacksize for task 139: unlimited
+  | Current stacksize for task 140: unlimited
+  | Current stacksize for task 141: unlimited
+  | Current stacksize for task 142: unlimited
+  | Current stacksize for task 143: unlimited
+  | Current stacksize for task 144: unlimited
+  | Current stacksize for task 145: unlimited
+  | Current stacksize for task 146: unlimited
+  | Current stacksize for task 147: unlimited
+  | Current stacksize for task 148: unlimited
+  | Current stacksize for task 149: unlimited
+  | Current stacksize for task 150: unlimited
+  | Current stacksize for task 151: unlimited
+  | Current stacksize for task 152: unlimited
+  | Current stacksize for task 153: unlimited
+  | Current stacksize for task 154: unlimited
+  | Current stacksize for task 155: unlimited
+  | Current stacksize for task 156: unlimited
+  | Current stacksize for task 157: unlimited
+  | Current stacksize for task 158: unlimited
+  | Current stacksize for task 159: unlimited
+  | Current stacksize for task 160: unlimited
+  | Current stacksize for task 161: unlimited
+  | Current stacksize for task 162: unlimited
+  | Current stacksize for task 163: unlimited
+  | Current stacksize for task 164: unlimited
+  | Current stacksize for task 165: unlimited
+  | Current stacksize for task 166: unlimited
+  | Current stacksize for task 167: unlimited
+  | Current stacksize for task 168: unlimited
+  | Current stacksize for task 169: unlimited
+  | Current stacksize for task 170: unlimited
+  | Current stacksize for task 171: unlimited
+  | Current stacksize for task 172: unlimited
+  | Current stacksize for task 173: unlimited
+  | Current stacksize for task 174: unlimited
+  | Current stacksize for task 175: unlimited
+  | Current stacksize for task 176: unlimited
+  | Current stacksize for task 177: unlimited
+  | Current stacksize for task 178: unlimited
+  | Current stacksize for task 179: unlimited
+  | Current stacksize for task 180: unlimited
+  | Current stacksize for task 181: unlimited
+  | Current stacksize for task 182: unlimited
+  | Current stacksize for task 183: unlimited
+  | Current stacksize for task 184: unlimited
+  | Current stacksize for task 185: unlimited
+  | Current stacksize for task 186: unlimited
+  | Current stacksize for task 187: unlimited
+  | Current stacksize for task 188: unlimited
+  | Current stacksize for task 189: unlimited
+  | Current stacksize for task 190: unlimited
+  | Current stacksize for task 191: unlimited
+  | Current stacksize for task 192: unlimited
+  | Current stacksize for task 193: unlimited
+  | Current stacksize for task 194: unlimited
+  | Current stacksize for task 195: unlimited
+  | Current stacksize for task 196: unlimited
+  | Current stacksize for task 197: unlimited
+  | Current stacksize for task 198: unlimited
+  | Current stacksize for task 199: unlimited
+  | Current stacksize for task 200: unlimited
+  | Current stacksize for task 201: unlimited
+  | Current stacksize for task 202: unlimited
+  | Current stacksize for task 203: unlimited
+  | Current stacksize for task 204: unlimited
+  | Current stacksize for task 205: unlimited
+  | Current stacksize for task 206: unlimited
+  | Current stacksize for task 207: unlimited
+  | Current stacksize for task 208: unlimited
+  | Current stacksize for task 209: unlimited
+  | Current stacksize for task 210: unlimited
+  | Current stacksize for task 211: unlimited
+  | Current stacksize for task 212: unlimited
+  | Current stacksize for task 213: unlimited
+  | Current stacksize for task 214: unlimited
+  | Current stacksize for task 215: unlimited
+  | Current stacksize for task 216: unlimited
+  | Current stacksize for task 217: unlimited
+  | Current stacksize for task 218: unlimited
+  | Current stacksize for task 219: unlimited
+  | Current stacksize for task 220: unlimited
+  | Current stacksize for task 221: unlimited
+  | Current stacksize for task 222: unlimited
+  | Current stacksize for task 223: unlimited
+  | Current stacksize for task 224: unlimited
+  | Current stacksize for task 225: unlimited
+  | Current stacksize for task 226: unlimited
+  | Current stacksize for task 227: unlimited
+  | Current stacksize for task 228: unlimited
+  | Current stacksize for task 229: unlimited
+  | Current stacksize for task 230: unlimited
+  | Current stacksize for task 231: unlimited
+  | Current stacksize for task 232: unlimited
+  | Current stacksize for task 233: unlimited
+  | Current stacksize for task 234: unlimited
+  | Current stacksize for task 235: unlimited
+  | Current stacksize for task 236: unlimited
+  | Current stacksize for task 237: unlimited
+  | Current stacksize for task 238: unlimited
+  | Current stacksize for task 239: unlimited
+  | Current stacksize for task 240: unlimited
+  | Current stacksize for task 241: unlimited
+  | Current stacksize for task 242: unlimited
+  | Current stacksize for task 243: unlimited
+  | Current stacksize for task 244: unlimited
+  | Current stacksize for task 245: unlimited
+  | Current stacksize for task 246: unlimited
+  | Current stacksize for task 247: unlimited
+  | Current stacksize for task 248: unlimited
+  | Current stacksize for task 249: unlimited
+  | Current stacksize for task 250: unlimited
+  | Current stacksize for task 251: unlimited
+  | Current stacksize for task 252: unlimited
+  | Current stacksize for task 253: unlimited
+  | Current stacksize for task 254: unlimited
+  | Current stacksize for task 255: unlimited
+
+  Consistency checks for the contents of control.in are next.
+
+  MPI_IN_PLACE appears to work with this MPI implementation.
+  | Keeping use_mpi_in_place .true. (see manual).
+  Target number of points in a grid batch is not set. Defaulting to  100
+  Method for grid partitioning is not set. Defaulting to parallel hash+maxmin partitioning.
+  Batch size limit is not set. Defaulting to    200
+  By default, will store active basis functions for each batch.
+  If in need of memory, prune_basis_once .false. can be used to disable this option.
+  communication_type for Hartree potential was not specified.
+  Defaulting to calc_hartree .
+  Pulay mixer: Number of initial linear mixing iterations not set.
+  Defaulting to    0 iterations.
+  Work space size for distributed Hartree potential not set.
+  Defaulting to   0.200000E+03 MB.
+  Algorithm-dependent basis array size parameters:
+  | n_max_pulay                         :       10
+  Presetting      1001 iterations before the initial mixing cycle
+  is restarted anyway using the sc_init_iter criterion / keyword.
+  Presetting a factor      1.000 between actual scf density residual
+  and density convergence criterion sc_accuracy_rho below which sc_init_iter
+  takes no effect.
+ * No s.c.f. convergence criteria (sc_accuracy_*) were provided in control.in.
+ * The run will proceed with a reasonable default guess, but please check whether.
+ * the s.c.f. cycles seem to take too much or too little time.
+  Calculation of forces was not defined in control.in. No forces will be calculated.
+  Geometry relaxation not requested: no relaxation will be performed.
+ * Notice: The s.c.f. convergence criterion sc_accuracy_rho was not provided.
+ * We used to stop in this case, and ask the user to provide reasonable
+ * scf convergence criteria. However, this led some users to employ criteria
+ * that led to extremely long run times, e.g., for simple relaxation.
+ * We now preset a default value for sc_accuracy_rho if it is not set.
+ * You may still wish to check if this setting is too tight or too loose for your needs.
+ * Based on n_atoms and forces and force-correction status, FHI-aims chose sc_accuracy_rho =  0.195959E-04 .
+  No accuracy limit for integral partition fn. given. Defaulting to  0.1000E-14.
+  No threshold value for u(r) in integrations given. Defaulting to  0.1000E-05.
+  No accuracy for occupation numbers given. Defaulting to  0.1000E-12.
+  No threshold value for occupation numbers given. Defaulting to  0.0000E+00.
+  No accuracy for fermi level given. Defaulting to  0.1000E-19.
+  Maximum # of iterations to find E_F not set. Defaulting to  200.
+  Will not use alltoall communication since running on < 1024 CPUs.
+  partition_type (choice of integration weights) for integrals was not specified.
+  | Using a version of the partition function of Stratmann and coworkers ('stratmann_sparse').
+  | At each grid point, the set of atoms used to build the partition table is smoothly restricted to
+  | only those atoms whose free-atom density would be non-zero at that grid point.
+  Partitioning for Hartree potential was not defined. Using partition_type for integrals.
+  | Adjusted default value of keyword multip_moments_threshold to:       0.10000000E-11
+  | This value may affect high angular momentum components of the Hartree potential in periodic systems.
+  Spin handling was not defined in control.in. Defaulting to unpolarized case.
+  No q(lm)/r^(l+1) cutoff set for long-range Hartree potential.
+  | Using default value of  0.100000E-09 .
+  | Verify using the multipole_threshold keyword.
+  Defaulting to new monopole extrapolation.
+  Density update method: density matrix based density update selected.
+  Scalapack and density-matrix based density update required:
+  Switching to packed matrix format "index" by default.
+  Charge integration errors on the 3D integration grid will be compensated
+  by explicit normalization and distribution of residual charges.
+  Use the "compensate_multipole_errors" flag to change this behaviour.
+  Found no potential conflicts with setting 'use_local_index' for this calculation.
+  Flag 'use_local_index' has not been set.
+  Testing whether we classify this calculation as large-scale ...
+  The calculation contains less than 100 atoms. This is most likely not a large-scale calculation.
+  Not setting 'use_local_index'.
+
+  Consistency checks for the contents of geometry.in are next.
+
+ * Warning: Initial charge and total charge of the system are inconsistent.
+ * Selected charge in control.in:    -2.0000
+ * Sum of initial charges in geometry.in:     0.0000
+  Number of empty states per atom not set in control.in - providing a guess from actual geometry.
+  | Total number of empty states used during s.c.f. cycle:        9
+  If you use a very high smearing, use empty_states (per atom!) in control.in to increase this value.
+
+  Structure-dependent array size parameters: 
+  | Maximum number of distinct radial functions  :       33
+  | Maximum number of basis functions            :      780
+  | Number of Kohn-Sham states (occupied + empty):       19
+------------------------------------------------------------
+  After read_input_data [GB]:    196.19
+
+  Performing system and environment tests:
+  | Environment variable OMP_NUM_THREADS correctly set to 1.
+  | Checking for ScaLAPACK...
+  | Testing pdtran()...
+  | All pdtran() tests passed.
+  After prepare_system [GB]:    196.19
+
+------------------------------------------------------------
+          Preparing all fixed parts of the calculation.
+------------------------------------------------------------
+  Determining machine precision:
+     2.2250738585072014E-308
+  Setting up grids for atomic and cluster calculations.
+
+  Creating wave function, potential, and density for free atoms.
+  Runtime choices for atomic solver:
+  | atomic solver xc        : PBE
+  | compute density gradient: 1
+  | compute kinetic density : F
+
+  Species: O
+
+  List of occupied orbitals and eigenvalues:
+    n    l              occ      energy [Ha]    energy [eV]
+    1    0           2.0000       -18.927378      -515.0401
+    2    0           2.0000        -0.880539       -23.9607
+    2    1           4.0000        -0.331811        -9.0290
+
+
+  Species: H
+
+  List of occupied orbitals and eigenvalues:
+    n    l              occ      energy [Ha]    energy [eV]
+    1    0           1.0000        -0.238386        -6.4868
+
+
+  Species: C
+
+  List of occupied orbitals and eigenvalues:
+    n    l              occ      energy [Ha]    energy [eV]
+    1    0           2.0000       -10.049212      -273.4530
+    2    0           2.0000        -0.504761       -13.7352
+    2    1           2.0000        -0.193631        -5.2690
+
+
+  Adding cutoff potential to free-atom effective potential.
+  Creating fixed part of basis set: Ionic, confined, hydrogenic.
+
+  O                    hydrogenic:
+
+  List of hydrogenic basis orbitals: 
+    n    l      effective z      eigenvalue [eV]  inner max. [A]     outer max. [A]     outer radius [A]   
+    1    0         1.848771       -46.5036           0.285417           0.285417           4.749044
+    1    0         3.095778      -130.3948           0.170802           0.170802           3.058254
+    2    1         2.448957       -20.3995           0.868203           0.868203           5.301386
+    2    1         5.857226      -116.6929           0.360044           0.360044           3.673771
+    3    2         8.537017      -110.1769           0.559099           0.559099           4.202559
+    3    2         8.962760      -121.4400           0.532417           0.532417           4.051222
+    4    3        14.096196      -168.9680           0.601650           0.601650           3.764702
+    1    0         3.621656      -178.4576           0.145704           0.145704           2.608875
+    1    0         5.972725      -485.3619           0.088266           0.088266           1.619544
+    2    1         6.294042      -134.7472           0.334580           0.334580           3.455938
+
+
+  H                    hydrogenic:
+
+  List of hydrogenic basis orbitals: 
+    n    l      effective z      eigenvalue [eV]  inner max. [A]     outer max. [A]     outer radius [A]   
+    1    0         1.219572       -20.2365           0.433025           0.433025           5.243229
+    1    0         1.790153       -43.6015           0.296433           0.296433           4.813203
+    2    1         3.438629       -40.2190           0.617279           0.617279           5.116587
+    2    1         3.486847       -41.3549           0.609778           0.609778           5.116587
+    3    2         6.208287       -58.2669           0.769215           0.769215           5.054418
+    1    0         2.627683       -93.9435           0.200461           0.200461           3.589321
+
+
+  C                    hydrogenic:
+
+  List of hydrogenic basis orbitals: 
+    n    l      effective z      eigenvalue [eV]  inner max. [A]     outer max. [A]     outer radius [A]   
+    1    0         1.806901       -44.4211           0.294391           0.294391           4.780049
+    1    0         3.259668      -144.5664           0.161723           0.161723           2.895699
+    2    1         1.974043       -13.2515           1.075734           1.075734           5.401630
+    2    1         3.166168       -34.0980           0.667797           0.667797           5.207114
+    3    2         5.890639       -52.4569           0.812068           0.812068           5.081344
+    3    2         6.677161       -67.4003           0.709889           0.709889           4.958612
+    4    3        10.149675       -87.6002           0.832167           0.832167           4.898362
+    1    0         6.773070      -624.1540           0.077664           0.077664           1.425008
+    1    0        13.859134     -2613.3215           0.038219           0.038219           0.709889
+    2    1         3.647461       -45.2524           0.583771           0.583771           5.019603
+
+  Creating atomic-like basis functions for current effective potential.
+
+  Species O                   :
+
+  List of atomic basis orbitals and eigenvalues:
+    n    l      energy [Ha]    energy [eV]    outer radius [A]
+    1    0       -18.927378      -515.0401       1.415765
+    2    0        -0.880539       -23.9607       5.048385
+    2    1        -0.331811        -9.0290       5.301386
+
+
+  Species H                   :
+
+  List of atomic basis orbitals and eigenvalues:
+    n    l      energy [Ha]    energy [eV]    outer radius [A]
+    1    0        -0.238386        -6.4868       5.373006
+
+
+  Species C                   :
+
+  List of atomic basis orbitals and eigenvalues:
+    n    l      energy [Ha]    energy [eV]    outer radius [A]
+    1    0       -10.049212      -273.4530       1.934409
+    2    0        -0.504761       -13.7352       5.271162
+    2    1        -0.193631        -5.2690       5.401630
+
+  Assembling full basis from fixed parts.
+  | Species O :   atomic orbital   1 s accepted.
+  | Species O :   atomic orbital   2 s accepted.
+  | Species O :    hydro orbital   1 s accepted.
+  | Species O :    hydro orbital   1 s accepted.
+  | Species O :    hydro orbital   1 s accepted.
+  | Species O :    hydro orbital   1 s accepted.
+  | Species O :   atomic orbital   2 p accepted.
+  | Species O :    hydro orbital   2 p accepted.
+  | Species O :    hydro orbital   2 p accepted.
+  | Species O :    hydro orbital   2 p accepted.
+  | Species O :    hydro orbital   3 d accepted.
+  | Species O :    hydro orbital   3 d accepted.
+  | Species O :    hydro orbital   4 f accepted.
+  | Species H :   atomic orbital   1 s accepted.
+  | Species H :    hydro orbital   1 s accepted.
+  | Species H :    hydro orbital   1 s accepted.
+  | Species H :    hydro orbital   1 s accepted.
+  | Species H :    hydro orbital   2 p accepted.
+  | Species H :    hydro orbital   2 p accepted.
+  | Species H :    hydro orbital   3 d accepted.
+  | Species C :   atomic orbital   1 s accepted.
+  | Species C :   atomic orbital   2 s accepted.
+  | Species C :    hydro orbital   1 s accepted.
+  | Species C :    hydro orbital   1 s accepted.
+  | Species C :    hydro orbital   1 s accepted.
+  | Species C :    hydro orbital   1 s accepted.
+  | Species C :   atomic orbital   2 p accepted.
+  | Species C :    hydro orbital   2 p accepted.
+  | Species C :    hydro orbital   2 p accepted.
+  | Species C :    hydro orbital   2 p accepted.
+  | Species C :    hydro orbital   3 d accepted.
+  | Species C :    hydro orbital   3 d accepted.
+  | Species C :    hydro orbital   4 f accepted.
+
+  Basis size parameters after reduction:
+  | Total number of radial functions:       33
+  | Total number of basis functions :      780
+
+  Per-task memory consumption for arrays in subroutine allocate_ext:
+  |          11.013528MB.
+  Testing on-site integration grid accuracy.
+  |  Species  Function  <phi|h_atom|phi> (log., in eV)  <phi|h_atom|phi> (rad., in eV)
+           1        1               -515.0401491148               -515.0401445497
+           1        2                -23.9606901999                -23.9606901323
+           1        3                206.0187779700                206.0211765023
+           1        4                158.2680046985                158.2701180152
+           1        5                561.6007594243                561.6062533605
+           1        6               1656.0587631500               1656.0425294084
+           1        7                 -9.0290718243                 -9.0290720379
+           1        8                 18.3295167950                 18.3295142218
+           1        9                208.6408259714                208.6408479852
+           1       10                167.4902732150                167.4902742661
+           1       11                 57.8199386798                 57.8199387405
+           1       12                119.1758445227                119.1758446893
+           1       13                125.2521680551                125.2521680660
+           2       14                 -6.4870767962                 -6.4871688290
+           2       15                  9.6181532369                  9.6169105299
+           2       16                 63.1486086958                 63.1461585604
+           2       17                200.3171618282                200.3149665030
+           2       18                 24.1870988321                 24.1870987988
+           2       19                 56.8339599798                 56.8339562921
+           2       20                 46.6431498561                 46.6431498370
+           3       21               -273.4529725981               -273.4529710451
+           3       22                -13.7352530191                -13.7352524550
+           3       23                 86.2023959499                 86.2029767647
+           3       24                260.2909073737                260.2918994838
+           3       25                563.5510062075                563.5857012050 ***
+           3       26               4529.1613221568               4529.2331546281 ***
+           3       27                 -5.2694407727                 -5.2694065285
+           3       28                 12.8835084872                 12.8835821661
+           3       29                 52.7701778290                 52.7713139734
+           3       30                180.8047974108                180.8047860803
+           3       31                 26.4065695601                 26.4065695149
+           3       32                 63.3949305197                 63.3949301312
+           3       33                 63.7095627995                 63.7095627983
+ * Note: Onsite integrals marked "***" above are less accurate than
+ * onsite_accuracy_threshold =    0.03000 eV. Usually, this is harmless.
+ * When in doubt, tighten the "radial" and/or "radial_multiplier" flags to check.
+
+  Preparing densities etc. for the partition functions (integrals / Hartree potential).
+
+  Preparations completed.
+  max(cpu_time)          :      0.243 s.
+  Wall clock time (cpu1) :      0.241 s.
+------------------------------------------------------------
+  After prepare_scf [GB]:    194.30
+
+  Initializing index lists of integration centers etc. from given atomic structure:
+  | Number of centers in hartree potential         :        36
+  | Number of centers in hartree multipole         :        36
+  | Number of centers in electron density summation:        36
+  | Number of centers in basis integrals           :        36
+  | Number of centers in integrals                 :        36
+  | Number of centers in hamiltonian               :        36
+  After initialize_bc_dependent_lists [GB]:    194.30
+
+  Initializing index lists of integration centers etc. from given atomic structure:
+  | Number of centers in hartree potential         :        36
+  | Number of centers in hartree multipole         :        36
+  | Number of centers in electron density summation:        36
+  | Number of centers in basis integrals           :        36
+  | Number of centers in integrals                 :        36
+  | Number of centers in hamiltonian               :        36
+
+------------------------------------------------------------
+          Begin self-consistency loop: Initialization.
+
+          Date     :  20250628, Time     :  161454.737
+------------------------------------------------------------
+  Available memory per node after initialize_hartree_non_periodic_ewald [GB]:    194.29
+  Available memory per node after initialize_recip_hartree_potential [GB]:    194.29
+  * Using 256 tasks for Scalapack Eigenvalue solver.
+  Detailed listing of tasks and assigned k-points:
+  (for non-periodic systems, the "k-point" denotes an internal label only)
+   Task     0 k-point     1 on nid001177
+   Task     1 k-point     1 on nid001177
+   Task     2 k-point     1 on nid001177
+   Task     3 k-point     1 on nid001177
+   Task     4 k-point     1 on nid001177
+   Task     5 k-point     1 on nid001177
+   Task     6 k-point     1 on nid001177
+   Task     7 k-point     1 on nid001177
+   Task     8 k-point     1 on nid001177
+   Task     9 k-point     1 on nid001177
+   Task    10 k-point     1 on nid001177
+   Task    11 k-point     1 on nid001177
+   Task    12 k-point     1 on nid001177
+   Task    13 k-point     1 on nid001177
+   Task    14 k-point     1 on nid001177
+   Task    15 k-point     1 on nid001177
+   Task    16 k-point     1 on nid001177
+   Task    17 k-point     1 on nid001177
+   Task    18 k-point     1 on nid001177
+   Task    19 k-point     1 on nid001177
+   Task    20 k-point     1 on nid001177
+   Task    21 k-point     1 on nid001177
+   Task    22 k-point     1 on nid001177
+   Task    23 k-point     1 on nid001177
+   Task    24 k-point     1 on nid001177
+   Task    25 k-point     1 on nid001177
+   Task    26 k-point     1 on nid001177
+   Task    27 k-point     1 on nid001177
+   Task    28 k-point     1 on nid001177
+   Task    29 k-point     1 on nid001177
+   Task    30 k-point     1 on nid001177
+   Task    31 k-point     1 on nid001177
+   Task    32 k-point     1 on nid001177
+   Task    33 k-point     1 on nid001177
+   Task    34 k-point     1 on nid001177
+   Task    35 k-point     1 on nid001177
+   Task    36 k-point     1 on nid001177
+   Task    37 k-point     1 on nid001177
+   Task    38 k-point     1 on nid001177
+   Task    39 k-point     1 on nid001177
+   Task    40 k-point     1 on nid001177
+   Task    41 k-point     1 on nid001177
+   Task    42 k-point     1 on nid001177
+   Task    43 k-point     1 on nid001177
+   Task    44 k-point     1 on nid001177
+   Task    45 k-point     1 on nid001177
+   Task    46 k-point     1 on nid001177
+   Task    47 k-point     1 on nid001177
+   Task    48 k-point     1 on nid001177
+   Task    49 k-point     1 on nid001177
+   Task    50 k-point     1 on nid001177
+   Task    51 k-point     1 on nid001177
+   Task    52 k-point     1 on nid001177
+   Task    53 k-point     1 on nid001177
+   Task    54 k-point     1 on nid001177
+   Task    55 k-point     1 on nid001177
+   Task    56 k-point     1 on nid001177
+   Task    57 k-point     1 on nid001177
+   Task    58 k-point     1 on nid001177
+   Task    59 k-point     1 on nid001177
+   Task    60 k-point     1 on nid001177
+   Task    61 k-point     1 on nid001177
+   Task    62 k-point     1 on nid001177
+   Task    63 k-point     1 on nid001177
+   Task    64 k-point     1 on nid001177
+   Task    65 k-point     1 on nid001177
+   Task    66 k-point     1 on nid001177
+   Task    67 k-point     1 on nid001177
+   Task    68 k-point     1 on nid001177
+   Task    69 k-point     1 on nid001177
+   Task    70 k-point     1 on nid001177
+   Task    71 k-point     1 on nid001177
+   Task    72 k-point     1 on nid001177
+   Task    73 k-point     1 on nid001177
+   Task    74 k-point     1 on nid001177
+   Task    75 k-point     1 on nid001177
+   Task    76 k-point     1 on nid001177
+   Task    77 k-point     1 on nid001177
+   Task    78 k-point     1 on nid001177
+   Task    79 k-point     1 on nid001177
+   Task    80 k-point     1 on nid001177
+   Task    81 k-point     1 on nid001177
+   Task    82 k-point     1 on nid001177
+   Task    83 k-point     1 on nid001177
+   Task    84 k-point     1 on nid001177
+   Task    85 k-point     1 on nid001177
+   Task    86 k-point     1 on nid001177
+   Task    87 k-point     1 on nid001177
+   Task    88 k-point     1 on nid001177
+   Task    89 k-point     1 on nid001177
+   Task    90 k-point     1 on nid001177
+   Task    91 k-point     1 on nid001177
+   Task    92 k-point     1 on nid001177
+   Task    93 k-point     1 on nid001177
+   Task    94 k-point     1 on nid001177
+   Task    95 k-point     1 on nid001177
+   Task    96 k-point     1 on nid001177
+   Task    97 k-point     1 on nid001177
+   Task    98 k-point     1 on nid001177
+   Task    99 k-point     1 on nid001177
+   Task   100 k-point     1 on nid001177
+   Task   101 k-point     1 on nid001177
+   Task   102 k-point     1 on nid001177
+   Task   103 k-point     1 on nid001177
+   Task   104 k-point     1 on nid001177
+   Task   105 k-point     1 on nid001177
+   Task   106 k-point     1 on nid001177
+   Task   107 k-point     1 on nid001177
+   Task   108 k-point     1 on nid001177
+   Task   109 k-point     1 on nid001177
+   Task   110 k-point     1 on nid001177
+   Task   111 k-point     1 on nid001177
+   Task   112 k-point     1 on nid001177
+   Task   113 k-point     1 on nid001177
+   Task   114 k-point     1 on nid001177
+   Task   115 k-point     1 on nid001177
+   Task   116 k-point     1 on nid001177
+   Task   117 k-point     1 on nid001177
+   Task   118 k-point     1 on nid001177
+   Task   119 k-point     1 on nid001177
+   Task   120 k-point     1 on nid001177
+   Task   121 k-point     1 on nid001177
+   Task   122 k-point     1 on nid001177
+   Task   123 k-point     1 on nid001177
+   Task   124 k-point     1 on nid001177
+   Task   125 k-point     1 on nid001177
+   Task   126 k-point     1 on nid001177
+   Task   127 k-point     1 on nid001177
+   Task   128 k-point     1 on nid001178
+   Task   129 k-point     1 on nid001178
+   Task   130 k-point     1 on nid001178
+   Task   131 k-point     1 on nid001178
+   Task   132 k-point     1 on nid001178
+   Task   133 k-point     1 on nid001178
+   Task   134 k-point     1 on nid001178
+   Task   135 k-point     1 on nid001178
+   Task   136 k-point     1 on nid001178
+   Task   137 k-point     1 on nid001178
+   Task   138 k-point     1 on nid001178
+   Task   139 k-point     1 on nid001178
+   Task   140 k-point     1 on nid001178
+   Task   141 k-point     1 on nid001178
+   Task   142 k-point     1 on nid001178
+   Task   143 k-point     1 on nid001178
+   Task   144 k-point     1 on nid001178
+   Task   145 k-point     1 on nid001178
+   Task   146 k-point     1 on nid001178
+   Task   147 k-point     1 on nid001178
+   Task   148 k-point     1 on nid001178
+   Task   149 k-point     1 on nid001178
+   Task   150 k-point     1 on nid001178
+   Task   151 k-point     1 on nid001178
+   Task   152 k-point     1 on nid001178
+   Task   153 k-point     1 on nid001178
+   Task   154 k-point     1 on nid001178
+   Task   155 k-point     1 on nid001178
+   Task   156 k-point     1 on nid001178
+   Task   157 k-point     1 on nid001178
+   Task   158 k-point     1 on nid001178
+   Task   159 k-point     1 on nid001178
+   Task   160 k-point     1 on nid001178
+   Task   161 k-point     1 on nid001178
+   Task   162 k-point     1 on nid001178
+   Task   163 k-point     1 on nid001178
+   Task   164 k-point     1 on nid001178
+   Task   165 k-point     1 on nid001178
+   Task   166 k-point     1 on nid001178
+   Task   167 k-point     1 on nid001178
+   Task   168 k-point     1 on nid001178
+   Task   169 k-point     1 on nid001178
+   Task   170 k-point     1 on nid001178
+   Task   171 k-point     1 on nid001178
+   Task   172 k-point     1 on nid001178
+   Task   173 k-point     1 on nid001178
+   Task   174 k-point     1 on nid001178
+   Task   175 k-point     1 on nid001178
+   Task   176 k-point     1 on nid001178
+   Task   177 k-point     1 on nid001178
+   Task   178 k-point     1 on nid001178
+   Task   179 k-point     1 on nid001178
+   Task   180 k-point     1 on nid001178
+   Task   181 k-point     1 on nid001178
+   Task   182 k-point     1 on nid001178
+   Task   183 k-point     1 on nid001178
+   Task   184 k-point     1 on nid001178
+   Task   185 k-point     1 on nid001178
+   Task   186 k-point     1 on nid001178
+   Task   187 k-point     1 on nid001178
+   Task   188 k-point     1 on nid001178
+   Task   189 k-point     1 on nid001178
+   Task   190 k-point     1 on nid001178
+   Task   191 k-point     1 on nid001178
+   Task   192 k-point     1 on nid001178
+   Task   193 k-point     1 on nid001178
+   Task   194 k-point     1 on nid001178
+   Task   195 k-point     1 on nid001178
+   Task   196 k-point     1 on nid001178
+   Task   197 k-point     1 on nid001178
+   Task   198 k-point     1 on nid001178
+   Task   199 k-point     1 on nid001178
+   Task   200 k-point     1 on nid001178
+   Task   201 k-point     1 on nid001178
+   Task   202 k-point     1 on nid001178
+   Task   203 k-point     1 on nid001178
+   Task   204 k-point     1 on nid001178
+   Task   205 k-point     1 on nid001178
+   Task   206 k-point     1 on nid001178
+   Task   207 k-point     1 on nid001178
+   Task   208 k-point     1 on nid001178
+   Task   209 k-point     1 on nid001178
+   Task   210 k-point     1 on nid001178
+   Task   211 k-point     1 on nid001178
+   Task   212 k-point     1 on nid001178
+   Task   213 k-point     1 on nid001178
+   Task   214 k-point     1 on nid001178
+   Task   215 k-point     1 on nid001178
+   Task   216 k-point     1 on nid001178
+   Task   217 k-point     1 on nid001178
+   Task   218 k-point     1 on nid001178
+   Task   219 k-point     1 on nid001178
+   Task   220 k-point     1 on nid001178
+   Task   221 k-point     1 on nid001178
+   Task   222 k-point     1 on nid001178
+   Task   223 k-point     1 on nid001178
+   Task   224 k-point     1 on nid001178
+   Task   225 k-point     1 on nid001178
+   Task   226 k-point     1 on nid001178
+   Task   227 k-point     1 on nid001178
+   Task   228 k-point     1 on nid001178
+   Task   229 k-point     1 on nid001178
+   Task   230 k-point     1 on nid001178
+   Task   231 k-point     1 on nid001178
+   Task   232 k-point     1 on nid001178
+   Task   233 k-point     1 on nid001178
+   Task   234 k-point     1 on nid001178
+   Task   235 k-point     1 on nid001178
+   Task   236 k-point     1 on nid001178
+   Task   237 k-point     1 on nid001178
+   Task   238 k-point     1 on nid001178
+   Task   239 k-point     1 on nid001178
+   Task   240 k-point     1 on nid001178
+   Task   241 k-point     1 on nid001178
+   Task   242 k-point     1 on nid001178
+   Task   243 k-point     1 on nid001178
+   Task   244 k-point     1 on nid001178
+   Task   245 k-point     1 on nid001178
+   Task   246 k-point     1 on nid001178
+   Task   247 k-point     1 on nid001178
+   Task   248 k-point     1 on nid001178
+   Task   249 k-point     1 on nid001178
+   Task   250 k-point     1 on nid001178
+   Task   251 k-point     1 on nid001178
+   Task   252 k-point     1 on nid001178
+   Task   253 k-point     1 on nid001178
+   Task   254 k-point     1 on nid001178
+   Task   255 k-point     1 on nid001178
+  Tasks:   256 split into     16 X     16 BLACS grid
+  Calculating block size based on n_basis =          780  max_nprow =           16  max_npcol =           16
+  ScaLAPACK block size set to:           16
+  Allocating        0.027 MB for ovlp
+  Allocating        0.027 MB for ham
+  Allocating        0.027 MB for eigenvec
+  Required Scalapack workspace - INTEGER:            1  REAL:             1
+  Available memory per node after initialize_scalapack [GB]:    194.29
+  Available memory per node after aims_elsi_init_scf [GB]:    194.29
+  Available memory per node after initialize_fixed_grids [GB]:    194.29
+  Partitioning the integration grid into batches with parallel hashing+maxmin method.
+  | Number of batches:     8248
+  | Maximal batch size:     200
+  | Minimal batch size:       1
+  | Average batch size:     110.836
+  | Standard deviation of batch sizes:      35.106
+
+  Integration load balanced across   256 MPI tasks.
+  Work distribution over tasks is as follows:
+  Task     0 has       3608 integration points.
+  Task     1 has       3513 integration points.
+  Task     2 has       3513 integration points.
+  Task     3 has       3515 integration points.
+  Task     4 has       3609 integration points.
+  Task     5 has       3518 integration points.
+  Task     6 has       3514 integration points.
+  Task     7 has       3510 integration points.
+  Task     8 has       3522 integration points.
+  Task     9 has       3526 integration points.
+  Task    10 has       3563 integration points.
+  Task    11 has       3547 integration points.
+  Task    12 has       3611 integration points.
+  Task    13 has       3564 integration points.
+  Task    14 has       3599 integration points.
+  Task    15 has       3610 integration points.
+  Task    16 has       3572 integration points.
+  Task    17 has       3510 integration points.
+  Task    18 has       3525 integration points.
+  Task    19 has       3526 integration points.
+  Task    20 has       3513 integration points.
+  Task    21 has       3620 integration points.
+  Task    22 has       3510 integration points.
+  Task    23 has       3571 integration points.
+  Task    24 has       3576 integration points.
+  Task    25 has       3521 integration points.
+  Task    26 has       3512 integration points.
+  Task    27 has       3609 integration points.
+  Task    28 has       3512 integration points.
+  Task    29 has       3547 integration points.
+  Task    30 has       3525 integration points.
+  Task    31 has       3603 integration points.
+  Task    32 has       3512 integration points.
+  Task    33 has       3569 integration points.
+  Task    34 has       3577 integration points.
+  Task    35 has       3521 integration points.
+  Task    36 has       3521 integration points.
+  Task    37 has       3599 integration points.
+  Task    38 has       3566 integration points.
+  Task    39 has       3661 integration points.
+  Task    40 has       3523 integration points.
+  Task    41 has       3510 integration points.
+  Task    42 has       3514 integration points.
+  Task    43 has       3516 integration points.
+  Task    44 has       3523 integration points.
+  Task    45 has       3557 integration points.
+  Task    46 has       3569 integration points.
+  Task    47 has       3581 integration points.
+  Task    48 has       3644 integration points.
+  Task    49 has       3515 integration points.
+  Task    50 has       3513 integration points.
+  Task    51 has       3601 integration points.
+  Task    52 has       3580 integration points.
+  Task    53 has       3580 integration points.
+  Task    54 has       3574 integration points.
+  Task    55 has       3513 integration points.
+  Task    56 has       3611 integration points.
+  Task    57 has       3657 integration points.
+  Task    58 has       3569 integration points.
+  Task    59 has       3515 integration points.
+  Task    60 has       3514 integration points.
+  Task    61 has       3688 integration points.
+  Task    62 has       3583 integration points.
+  Task    63 has       3564 integration points.
+  Task    64 has       3528 integration points.
+  Task    65 has       3609 integration points.
+  Task    66 has       3512 integration points.
+  Task    67 has       3647 integration points.
+  Task    68 has       3576 integration points.
+  Task    69 has       3612 integration points.
+  Task    70 has       3578 integration points.
+  Task    71 has       3579 integration points.
+  Task    72 has       3571 integration points.
+  Task    73 has       3659 integration points.
+  Task    74 has       3622 integration points.
+  Task    75 has       3514 integration points.
+  Task    76 has       3659 integration points.
+  Task    77 has       3510 integration points.
+  Task    78 has       3651 integration points.
+  Task    79 has       3510 integration points.
+  Task    80 has       3613 integration points.
+  Task    81 has       3567 integration points.
+  Task    82 has       3572 integration points.
+  Task    83 has       3675 integration points.
+  Task    84 has       3582 integration points.
+  Task    85 has       3516 integration points.
+  Task    86 has       3656 integration points.
+  Task    87 has       3598 integration points.
+  Task    88 has       3534 integration points.
+  Task    89 has       3514 integration points.
+  Task    90 has       3645 integration points.
+  Task    91 has       3690 integration points.
+  Task    92 has       3521 integration points.
+  Task    93 has       3675 integration points.
+  Task    94 has       3566 integration points.
+  Task    95 has       3580 integration points.
+  Task    96 has       3511 integration points.
+  Task    97 has       3511 integration points.
+  Task    98 has       3571 integration points.
+  Task    99 has       3621 integration points.
+  Task   100 has       3624 integration points.
+  Task   101 has       3577 integration points.
+  Task   102 has       3577 integration points.
+  Task   103 has       3510 integration points.
+  Task   104 has       3517 integration points.
+  Task   105 has       3665 integration points.
+  Task   106 has       3513 integration points.
+  Task   107 has       3549 integration points.
+  Task   108 has       3578 integration points.
+  Task   109 has       3606 integration points.
+  Task   110 has       3609 integration points.
+  Task   111 has       3510 integration points.
+  Task   112 has       3588 integration points.
+  Task   113 has       3517 integration points.
+  Task   114 has       3577 integration points.
+  Task   115 has       3624 integration points.
+  Task   116 has       3579 integration points.
+  Task   117 has       3580 integration points.
+  Task   118 has       3576 integration points.
+  Task   119 has       3522 integration points.
+  Task   120 has       3659 integration points.
+  Task   121 has       3610 integration points.
+  Task   122 has       3653 integration points.
+  Task   123 has       3574 integration points.
+  Task   124 has       3555 integration points.
+  Task   125 has       3570 integration points.
+  Task   126 has       3512 integration points.
+  Task   127 has       3597 integration points.
+  Task   128 has       3568 integration points.
+  Task   129 has       3559 integration points.
+  Task   130 has       3563 integration points.
+  Task   131 has       3648 integration points.
+  Task   132 has       3577 integration points.
+  Task   133 has       3581 integration points.
+  Task   134 has       3516 integration points.
+  Task   135 has       3601 integration points.
+  Task   136 has       3512 integration points.
+  Task   137 has       3579 integration points.
+  Task   138 has       3511 integration points.
+  Task   139 has       3691 integration points.
+  Task   140 has       3609 integration points.
+  Task   141 has       3645 integration points.
+  Task   142 has       3516 integration points.
+  Task   143 has       3662 integration points.
+  Task   144 has       3550 integration points.
+  Task   145 has       3560 integration points.
+  Task   146 has       3661 integration points.
+  Task   147 has       3582 integration points.
+  Task   148 has       3566 integration points.
+  Task   149 has       3516 integration points.
+  Task   150 has       3580 integration points.
+  Task   151 has       3514 integration points.
+  Task   152 has       3512 integration points.
+  Task   153 has       3612 integration points.
+  Task   154 has       3518 integration points.
+  Task   155 has       3514 integration points.
+  Task   156 has       3510 integration points.
+  Task   157 has       3513 integration points.
+  Task   158 has       3633 integration points.
+  Task   159 has       3610 integration points.
+  Task   160 has       3515 integration points.
+  Task   161 has       3607 integration points.
+  Task   162 has       3511 integration points.
+  Task   163 has       3690 integration points.
+  Task   164 has       3568 integration points.
+  Task   165 has       3567 integration points.
+  Task   166 has       3511 integration points.
+  Task   167 has       3514 integration points.
+  Task   168 has       3610 integration points.
+  Task   169 has       3521 integration points.
+  Task   170 has       3523 integration points.
+  Task   171 has       3513 integration points.
+  Task   172 has       3619 integration points.
+  Task   173 has       3647 integration points.
+  Task   174 has       3511 integration points.
+  Task   175 has       3522 integration points.
+  Task   176 has       3631 integration points.
+  Task   177 has       3646 integration points.
+  Task   178 has       3663 integration points.
+  Task   179 has       3636 integration points.
+  Task   180 has       3516 integration points.
+  Task   181 has       3563 integration points.
+  Task   182 has       3678 integration points.
+  Task   183 has       3544 integration points.
+  Task   184 has       3624 integration points.
+  Task   185 has       3513 integration points.
+  Task   186 has       3511 integration points.
+  Task   187 has       3513 integration points.
+  Task   188 has       3576 integration points.
+  Task   189 has       3654 integration points.
+  Task   190 has       3600 integration points.
+  Task   191 has       3512 integration points.
+  Task   192 has       3686 integration points.
+  Task   193 has       3693 integration points.
+  Task   194 has       3559 integration points.
+  Task   195 has       3580 integration points.
+  Task   196 has       3658 integration points.
+  Task   197 has       3512 integration points.
+  Task   198 has       3519 integration points.
+  Task   199 has       3613 integration points.
+  Task   200 has       3523 integration points.
+  Task   201 has       3536 integration points.
+  Task   202 has       3634 integration points.
+  Task   203 has       3517 integration points.
+  Task   204 has       3510 integration points.
+  Task   205 has       3519 integration points.
+  Task   206 has       3524 integration points.
+  Task   207 has       3514 integration points.
+  Task   208 has       3634 integration points.
+  Task   209 has       3514 integration points.
+  Task   210 has       3567 integration points.
+  Task   211 has       3648 integration points.
+  Task   212 has       3513 integration points.
+  Task   213 has       3515 integration points.
+  Task   214 has       3570 integration points.
+  Task   215 has       3571 integration points.
+  Task   216 has       3621 integration points.
+  Task   217 has       3618 integration points.
+  Task   218 has       3657 integration points.
+  Task   219 has       3653 integration points.
+  Task   220 has       3578 integration points.
+  Task   221 has       3518 integration points.
+  Task   222 has       3621 integration points.
+  Task   223 has       3585 integration points.
+  Task   224 has       3688 integration points.
+  Task   225 has       3565 integration points.
+  Task   226 has       3688 integration points.
+  Task   227 has       3515 integration points.
+  Task   228 has       3582 integration points.
+  Task   229 has       3606 integration points.
+  Task   230 has       3576 integration points.
+  Task   231 has       3513 integration points.
+  Task   232 has       3514 integration points.
+  Task   233 has       3596 integration points.
+  Task   234 has       3570 integration points.
+  Task   235 has       3520 integration points.
+  Task   236 has       3510 integration points.
+  Task   237 has       3518 integration points.
+  Task   238 has       3511 integration points.
+  Task   239 has       3516 integration points.
+  Task   240 has       3567 integration points.
+  Task   241 has       3581 integration points.
+  Task   242 has       3620 integration points.
+  Task   243 has       3637 integration points.
+  Task   244 has       3510 integration points.
+  Task   245 has       3513 integration points.
+  Task   246 has       3569 integration points.
+  Task   247 has       3626 integration points.
+  Task   248 has       3511 integration points.
+  Task   249 has       3655 integration points.
+  Task   250 has       3529 integration points.
+  Task   251 has       3511 integration points.
+  Task   252 has       3622 integration points.
+  Task   253 has       3657 integration points.
+  Task   254 has       3591 integration points.
+  Task   255 has       3574 integration points.
+  Available memory per node after partition_grid [GB]:    194.28
+  Initializing partition tables, free-atom densities, potentials, etc. across the integration grid (initialize_grid_storage).
+  | initialize_grid_storage: Actual outermost partition radius vs. multipole_radius_free
+  | (-- VB: in principle, multipole_radius_free should be larger, hence this output)
+  | Species        1: Confinement radius =              6.000000000000000 AA, multipole_radius_free =              6.064445521808699 AA.
+  | Species        1: outer_partition_radius set to              6.064445521808699 AA .
+  | Species        2: Confinement radius =              6.000000000000000 AA, multipole_radius_free =              6.071692442739658 AA.
+  | Species        2: outer_partition_radius set to              6.071692442739658 AA .
+  | Species        3: Confinement radius =              6.000000000000000 AA, multipole_radius_free =              6.029870734432609 AA.
+  | Species        3: outer_partition_radius set to              6.029870734432609 AA .
+  | The sparse table of interatomic distances needs         15.27 kbyte instead of        10.37 kbyte of memory.
+  | Using the partition_type stratmann_smoother will reduce your memory usage.
+  | Net number of integration points:   914176
+  | of which are non-zero points    :   692969
+  Available memory per node after initialize_grid_storage_p1 [GB]:    194.27
+  Renormalizing the initial density to the exact electron count on the 3D integration grid.
+  | Initial density: Formal number of electrons (from input files) :      18.0000000000
+  | Integrated number of electrons on 3D grid     :      17.9999992330
+  | Charge integration error                      :      -0.0000007670
+  | Normalization factor for density and gradient :       1.0000000426
+  Renormalizing the free-atom superposition density to the exact electron count on the 3D integration grid.
+  | Formal number of electrons (from input files) :      20.0000000000
+  | Integrated number of electrons on 3D grid     :      17.9999992330
+  | Charge integration error                      :      -0.0000007670
+  | Normalization factor for density and gradient :       1.0000000426
+  Obtaining max. number of non-zero basis functions in each batch (get_n_compute_maxes).
+  | Maximal number of non-zero basis functions:      577 in task     0
+  | Maximal number of non-zero basis functions:      639 in task     1
+  | Maximal number of non-zero basis functions:      627 in task     2
+  | Maximal number of non-zero basis functions:      653 in task     3
+  | Maximal number of non-zero basis functions:      635 in task     4
+  | Maximal number of non-zero basis functions:      609 in task     5
+  | Maximal number of non-zero basis functions:      632 in task     6
+  | Maximal number of non-zero basis functions:      581 in task     7
+  | Maximal number of non-zero basis functions:      589 in task     8
+  | Maximal number of non-zero basis functions:      613 in task     9
+  | Maximal number of non-zero basis functions:      583 in task    10
+  | Maximal number of non-zero basis functions:      571 in task    11
+  | Maximal number of non-zero basis functions:      620 in task    12
+  | Maximal number of non-zero basis functions:      564 in task    13
+  | Maximal number of non-zero basis functions:      627 in task    14
+  | Maximal number of non-zero basis functions:      609 in task    15
+  | Maximal number of non-zero basis functions:      586 in task    16
+  | Maximal number of non-zero basis functions:      629 in task    17
+  | Maximal number of non-zero basis functions:      585 in task    18
+  | Maximal number of non-zero basis functions:      589 in task    19
+  | Maximal number of non-zero basis functions:      608 in task    20
+  | Maximal number of non-zero basis functions:      570 in task    21
+  | Maximal number of non-zero basis functions:      620 in task    22
+  | Maximal number of non-zero basis functions:      637 in task    23
+  | Maximal number of non-zero basis functions:      588 in task    24
+  | Maximal number of non-zero basis functions:      605 in task    25
+  | Maximal number of non-zero basis functions:      610 in task    26
+  | Maximal number of non-zero basis functions:      600 in task    27
+  | Maximal number of non-zero basis functions:      605 in task    28
+  | Maximal number of non-zero basis functions:      622 in task    29
+  | Maximal number of non-zero basis functions:      618 in task    30
+  | Maximal number of non-zero basis functions:      578 in task    31
+  | Maximal number of non-zero basis functions:      622 in task    32
+  | Maximal number of non-zero basis functions:      621 in task    33
+  | Maximal number of non-zero basis functions:      625 in task    34
+  | Maximal number of non-zero basis functions:      633 in task    35
+  | Maximal number of non-zero basis functions:      632 in task    36
+  | Maximal number of non-zero basis functions:      617 in task    37
+  | Maximal number of non-zero basis functions:      654 in task    38
+  | Maximal number of non-zero basis functions:      586 in task    39
+  | Maximal number of non-zero basis functions:      612 in task    40
+  | Maximal number of non-zero basis functions:      576 in task    41
+  | Maximal number of non-zero basis functions:      558 in task    42
+  | Maximal number of non-zero basis functions:      588 in task    43
+  | Maximal number of non-zero basis functions:      626 in task    44
+  | Maximal number of non-zero basis functions:      588 in task    45
+  | Maximal number of non-zero basis functions:      610 in task    46
+  | Maximal number of non-zero basis functions:      612 in task    47
+  | Maximal number of non-zero basis functions:      563 in task    48
+  | Maximal number of non-zero basis functions:      615 in task    49
+  | Maximal number of non-zero basis functions:      632 in task    50
+  | Maximal number of non-zero basis functions:      579 in task    51
+  | Maximal number of non-zero basis functions:      583 in task    52
+  | Maximal number of non-zero basis functions:      644 in task    53
+  | Maximal number of non-zero basis functions:      617 in task    54
+  | Maximal number of non-zero basis functions:      617 in task    55
+  | Maximal number of non-zero basis functions:      625 in task    56
+  | Maximal number of non-zero basis functions:      556 in task    57
+  | Maximal number of non-zero basis functions:      589 in task    58
+  | Maximal number of non-zero basis functions:      637 in task    59
+  | Maximal number of non-zero basis functions:      638 in task    60
+  | Maximal number of non-zero basis functions:      597 in task    61
+  | Maximal number of non-zero basis functions:      599 in task    62
+  | Maximal number of non-zero basis functions:      597 in task    63
+  | Maximal number of non-zero basis functions:      531 in task    64
+  | Maximal number of non-zero basis functions:      546 in task    65
+  | Maximal number of non-zero basis functions:      547 in task    66
+  | Maximal number of non-zero basis functions:      567 in task    67
+  | Maximal number of non-zero basis functions:      604 in task    68
+  | Maximal number of non-zero basis functions:      599 in task    69
+  | Maximal number of non-zero basis functions:      637 in task    70
+  | Maximal number of non-zero basis functions:      619 in task    71
+  | Maximal number of non-zero basis functions:      616 in task    72
+  | Maximal number of non-zero basis functions:      603 in task    73
+  | Maximal number of non-zero basis functions:      615 in task    74
+  | Maximal number of non-zero basis functions:      619 in task    75
+  | Maximal number of non-zero basis functions:      621 in task    76
+  | Maximal number of non-zero basis functions:      610 in task    77
+  | Maximal number of non-zero basis functions:      577 in task    78
+  | Maximal number of non-zero basis functions:      589 in task    79
+  | Maximal number of non-zero basis functions:      549 in task    80
+  | Maximal number of non-zero basis functions:      618 in task    81
+  | Maximal number of non-zero basis functions:      590 in task    82
+  | Maximal number of non-zero basis functions:      590 in task    83
+  | Maximal number of non-zero basis functions:      609 in task    84
+  | Maximal number of non-zero basis functions:      613 in task    85
+  | Maximal number of non-zero basis functions:      568 in task    86
+  | Maximal number of non-zero basis functions:      569 in task    87
+  | Maximal number of non-zero basis functions:      621 in task    88
+  | Maximal number of non-zero basis functions:      655 in task    89
+  | Maximal number of non-zero basis functions:      585 in task    90
+  | Maximal number of non-zero basis functions:      586 in task    91
+  | Maximal number of non-zero basis functions:      582 in task    92
+  | Maximal number of non-zero basis functions:      612 in task    93
+  | Maximal number of non-zero basis functions:      586 in task    94
+  | Maximal number of non-zero basis functions:      612 in task    95
+  | Maximal number of non-zero basis functions:      547 in task    96
+  | Maximal number of non-zero basis functions:      648 in task    97
+  | Maximal number of non-zero basis functions:      540 in task    98
+  | Maximal number of non-zero basis functions:      579 in task    99
+  | Maximal number of non-zero basis functions:      584 in task   100
+  | Maximal number of non-zero basis functions:      563 in task   101
+  | Maximal number of non-zero basis functions:      625 in task   102
+  | Maximal number of non-zero basis functions:      613 in task   103
+  | Maximal number of non-zero basis functions:      603 in task   104
+  | Maximal number of non-zero basis functions:      618 in task   105
+  | Maximal number of non-zero basis functions:      625 in task   106
+  | Maximal number of non-zero basis functions:      599 in task   107
+  | Maximal number of non-zero basis functions:      590 in task   108
+  | Maximal number of non-zero basis functions:      592 in task   109
+  | Maximal number of non-zero basis functions:      581 in task   110
+  | Maximal number of non-zero basis functions:      595 in task   111
+  | Maximal number of non-zero basis functions:      570 in task   112
+  | Maximal number of non-zero basis functions:      611 in task   113
+  | Maximal number of non-zero basis functions:      574 in task   114
+  | Maximal number of non-zero basis functions:      599 in task   115
+  | Maximal number of non-zero basis functions:      619 in task   116
+  | Maximal number of non-zero basis functions:      598 in task   117
+  | Maximal number of non-zero basis functions:      595 in task   118
+  | Maximal number of non-zero basis functions:      637 in task   119
+  | Maximal number of non-zero basis functions:      565 in task   120
+  | Maximal number of non-zero basis functions:      627 in task   121
+  | Maximal number of non-zero basis functions:      613 in task   122
+  | Maximal number of non-zero basis functions:      624 in task   123
+  | Maximal number of non-zero basis functions:      566 in task   124
+  | Maximal number of non-zero basis functions:      598 in task   125
+  | Maximal number of non-zero basis functions:      605 in task   126
+  | Maximal number of non-zero basis functions:      574 in task   127
+  | Maximal number of non-zero basis functions:      640 in task   128
+  | Maximal number of non-zero basis functions:      625 in task   129
+  | Maximal number of non-zero basis functions:      589 in task   130
+  | Maximal number of non-zero basis functions:      589 in task   131
+  | Maximal number of non-zero basis functions:      594 in task   132
+  | Maximal number of non-zero basis functions:      627 in task   133
+  | Maximal number of non-zero basis functions:      604 in task   134
+  | Maximal number of non-zero basis functions:      583 in task   135
+  | Maximal number of non-zero basis functions:      568 in task   136
+  | Maximal number of non-zero basis functions:      644 in task   137
+  | Maximal number of non-zero basis functions:      605 in task   138
+  | Maximal number of non-zero basis functions:      569 in task   139
+  | Maximal number of non-zero basis functions:      580 in task   140
+  | Maximal number of non-zero basis functions:      551 in task   141
+  | Maximal number of non-zero basis functions:      614 in task   142
+  | Maximal number of non-zero basis functions:      592 in task   143
+  | Maximal number of non-zero basis functions:      613 in task   144
+  | Maximal number of non-zero basis functions:      626 in task   145
+  | Maximal number of non-zero basis functions:      602 in task   146
+  | Maximal number of non-zero basis functions:      615 in task   147
+  | Maximal number of non-zero basis functions:      622 in task   148
+  | Maximal number of non-zero basis functions:      637 in task   149
+  | Maximal number of non-zero basis functions:      623 in task   150
+  | Maximal number of non-zero basis functions:      655 in task   151
+  | Maximal number of non-zero basis functions:      630 in task   152
+  | Maximal number of non-zero basis functions:      608 in task   153
+  | Maximal number of non-zero basis functions:      611 in task   154
+  | Maximal number of non-zero basis functions:      629 in task   155
+  | Maximal number of non-zero basis functions:      635 in task   156
+  | Maximal number of non-zero basis functions:      603 in task   157
+  | Maximal number of non-zero basis functions:      634 in task   158
+  | Maximal number of non-zero basis functions:      616 in task   159
+  | Maximal number of non-zero basis functions:      641 in task   160
+  | Maximal number of non-zero basis functions:      582 in task   161
+  | Maximal number of non-zero basis functions:      564 in task   162
+  | Maximal number of non-zero basis functions:      579 in task   163
+  | Maximal number of non-zero basis functions:      601 in task   164
+  | Maximal number of non-zero basis functions:      628 in task   165
+  | Maximal number of non-zero basis functions:      596 in task   166
+  | Maximal number of non-zero basis functions:      627 in task   167
+  | Maximal number of non-zero basis functions:      607 in task   168
+  | Maximal number of non-zero basis functions:      622 in task   169
+  | Maximal number of non-zero basis functions:      627 in task   170
+  | Maximal number of non-zero basis functions:      581 in task   171
+  | Maximal number of non-zero basis functions:      618 in task   172
+  | Maximal number of non-zero basis functions:      645 in task   173
+  | Maximal number of non-zero basis functions:      613 in task   174
+  | Maximal number of non-zero basis functions:      616 in task   175
+  | Maximal number of non-zero basis functions:      620 in task   176
+  | Maximal number of non-zero basis functions:      592 in task   177
+  | Maximal number of non-zero basis functions:      538 in task   178
+  | Maximal number of non-zero basis functions:      623 in task   179
+  | Maximal number of non-zero basis functions:      629 in task   180
+  | Maximal number of non-zero basis functions:      602 in task   181
+  | Maximal number of non-zero basis functions:      625 in task   182
+  | Maximal number of non-zero basis functions:      579 in task   183
+  | Maximal number of non-zero basis functions:      622 in task   184
+  | Maximal number of non-zero basis functions:      620 in task   185
+  | Maximal number of non-zero basis functions:      602 in task   186
+  | Maximal number of non-zero basis functions:      603 in task   187
+  | Maximal number of non-zero basis functions:      640 in task   188
+  | Maximal number of non-zero basis functions:      549 in task   189
+  | Maximal number of non-zero basis functions:      576 in task   190
+  | Maximal number of non-zero basis functions:      565 in task   191
+  | Maximal number of non-zero basis functions:      605 in task   192
+  | Maximal number of non-zero basis functions:      570 in task   193
+  | Maximal number of non-zero basis functions:      631 in task   194
+  | Maximal number of non-zero basis functions:      626 in task   195
+  | Maximal number of non-zero basis functions:      618 in task   196
+  | Maximal number of non-zero basis functions:      632 in task   197
+  | Maximal number of non-zero basis functions:      584 in task   198
+  | Maximal number of non-zero basis functions:      586 in task   199
+  | Maximal number of non-zero basis functions:      609 in task   200
+  | Maximal number of non-zero basis functions:      569 in task   201
+  | Maximal number of non-zero basis functions:      585 in task   202
+  | Maximal number of non-zero basis functions:      604 in task   203
+  | Maximal number of non-zero basis functions:      600 in task   204
+  | Maximal number of non-zero basis functions:      591 in task   205
+  | Maximal number of non-zero basis functions:      579 in task   206
+  | Maximal number of non-zero basis functions:      613 in task   207
+  | Maximal number of non-zero basis functions:      540 in task   208
+  | Maximal number of non-zero basis functions:      627 in task   209
+  | Maximal number of non-zero basis functions:      532 in task   210
+  | Maximal number of non-zero basis functions:      592 in task   211
+  | Maximal number of non-zero basis functions:      643 in task   212
+  | Maximal number of non-zero basis functions:      621 in task   213
+  | Maximal number of non-zero basis functions:      614 in task   214
+  | Maximal number of non-zero basis functions:      601 in task   215
+  | Maximal number of non-zero basis functions:      620 in task   216
+  | Maximal number of non-zero basis functions:      596 in task   217
+  | Maximal number of non-zero basis functions:      578 in task   218
+  | Maximal number of non-zero basis functions:      584 in task   219
+  | Maximal number of non-zero basis functions:      612 in task   220
+  | Maximal number of non-zero basis functions:      542 in task   221
+  | Maximal number of non-zero basis functions:      552 in task   222
+  | Maximal number of non-zero basis functions:      588 in task   223
+  | Maximal number of non-zero basis functions:      607 in task   224
+  | Maximal number of non-zero basis functions:      544 in task   225
+  | Maximal number of non-zero basis functions:      602 in task   226
+  | Maximal number of non-zero basis functions:      620 in task   227
+  | Maximal number of non-zero basis functions:      584 in task   228
+  | Maximal number of non-zero basis functions:      582 in task   229
+  | Maximal number of non-zero basis functions:      615 in task   230
+  | Maximal number of non-zero basis functions:      602 in task   231
+  | Maximal number of non-zero basis functions:      637 in task   232
+  | Maximal number of non-zero basis functions:      594 in task   233
+  | Maximal number of non-zero basis functions:      610 in task   234
+  | Maximal number of non-zero basis functions:      580 in task   235
+  | Maximal number of non-zero basis functions:      592 in task   236
+  | Maximal number of non-zero basis functions:      549 in task   237
+  | Maximal number of non-zero basis functions:      568 in task   238
+  | Maximal number of non-zero basis functions:      592 in task   239
+  | Maximal number of non-zero basis functions:      588 in task   240
+  | Maximal number of non-zero basis functions:      592 in task   241
+  | Maximal number of non-zero basis functions:      579 in task   242
+  | Maximal number of non-zero basis functions:      603 in task   243
+  | Maximal number of non-zero basis functions:      577 in task   244
+  | Maximal number of non-zero basis functions:      546 in task   245
+  | Maximal number of non-zero basis functions:      592 in task   246
+  | Maximal number of non-zero basis functions:      551 in task   247
+  | Maximal number of non-zero basis functions:      553 in task   248
+  | Maximal number of non-zero basis functions:      590 in task   249
+  | Maximal number of non-zero basis functions:      556 in task   250
+  | Maximal number of non-zero basis functions:      599 in task   251
+  | Maximal number of non-zero basis functions:      574 in task   252
+  | Maximal number of non-zero basis functions:      586 in task   253
+  | Maximal number of non-zero basis functions:      607 in task   254
+  | Maximal number of non-zero basis functions:      593 in task   255
+  Available memory per node after get_n_compute_maxes_p1 [GB]:    194.27
+  Hamiltonian matrix size:
+  | Size of matrix non-packed:               304590
+  | Size of matrix packed:          288827
+  Allocating        0.113 MB for KS_eigenvector
+  Available memory per node after allocate_matrices [GB]:    194.27
+  Available memory per node after init_comm_sparse_local_matrix_scalapack [GB]:    194.27
+  Integrating Hamiltonian matrix: batch-based integration.
+  Time summed over all CPUs for integration: real work       33.357 s, elapsed       37.767 s
+  Available memory per node after integrate hamiltonian matrix [GB]:    194.26
+  Integrating overlap matrix.
+  Time summed over all CPUs for integration: real work       18.484 s, elapsed       20.741 s
+  Available memory per node after integrate ovlp matrix [GB]:    194.26
+  Not deallocating overlap matrix.
+  Available memory per node after save_overlap_scalapack [GB]:    194.26
+  Available memory per node after advance_KS_solution [GB]:    194.26
+  Calculating total energy contributions from superposition of free atom densities.
+  Initialize hartree_potential_storage
+  Max. number of atoms included in rho_multipole:           36
+
+  End scf initialization - timings             :  max(cpu_time)    wall_clock(cpu1)
+  | Time for scf. initialization                :        0.751 s           0.751 s
+  | Boundary condition initialization           :        0.029 s           0.029 s
+  | Integration                                 :        0.259 s           0.259 s
+  | Grid partitioning                           :        0.411 s           0.411 s
+  | Preloading free-atom quantities on grid     :        0.075 s           0.075 s
+  | Free-atom superposition energy              :        0.003 s           0.002 s
+
+  Partial memory accounting:
+  | Current value for overall tracked memory usage:
+  |   Minimum:        5.695 MB (on task  17)
+  |   Maximum:        5.734 MB (on task   0)
+  |   Average:        5.697 MB
+  | Peak value for overall tracked memory usage:
+  |   Minimum:       10.284 MB (on task 210 after allocating wave)
+  |   Maximum:       11.963 MB (on task  89 after allocating wave)
+  |   Average:       11.192 MB
+  | Largest tracked array allocation so far:
+  |   Minimum:        2.204 MB (overlap_matrix on task  64)
+  |   Maximum:        3.273 MB (hamiltonian_shell on task  89)
+  |   Average:        2.753 MB
+  Note:  These values currently only include a subset of arrays which are explicitly tracked.
+  The "true" memory usage will be greater.
+------------------------------------------------------------
+  Available memory after allocating mixing [GB]:    194.26
+  Evaluating new KS density using the density matrix
+  Evaluating density matrix
+  Finished reading density matrices from file
+  | Time :      0.000 s
+
+  Time summed over all CPUs for getting density from density matrix: real work       65.700 s, elapsed       76.145 s
+  Integration grid: deviation in total charge (<rho> - N_e) =   1.776357E-14
+
+  Time for density update prior                :  max(cpu_time)    wall_clock(cpu1)
+  | self-consistency iterative process          :        0.313 s           0.313 s
+  Available memory before start of SCF loop [GB]:    194.25
+
+------------------------------------------------------------
+          Initial SCF-cycle to compute last known
+          density from restart information.
+
+  Date     :  20250628, Time     :  161455.802
+------------------------------------------------------------
+  Available memory per node after mixing [GB]:    194.25
+  Renormalizing the density to the exact electron count on the 3D integration grid.
+  | Formal number of electrons (from input files) :      20.0000000000
+  | Integrated number of electrons on 3D grid     :      20.0000000000
+  | Charge integration error                      :       0.0000000000
+  | Normalization factor for density and gradient :       1.0000000000
+
+  Evaluating partitioned Hartree potential by multipole expansion.
+  | Original multipole sum: apparent total charge =  -0.200000E+01
+  | Sum of charges compensated after spline to logarithmic grids =  -0.303573E-05
+  | Analytical far-field extrapolation by fixed multipoles:
+  | Hartree multipole sum: apparent total charge =  -0.200000E+01
+  Summing up the Hartree potential.
+  Time summed over all CPUs for potential: real work        0.062 s, elapsed        0.065 s
+  | RMS charge density error from multipole expansion :   0.615143E-02
+
+  Integrating Hamiltonian matrix: batch-based integration.
+  Time summed over all CPUs for integration: real work       33.383 s, elapsed       37.488 s
+
+  Updating Kohn-Sham eigenvalues and eigenvectors using ELSI and the ELPA eigensolver.
+  Overlap matrix is not singular
+  | Lowest and highest eigenvalues :  0.5526E-04,  0.9185E+01
+  Finished singularity check of overlap matrix
+  | Time :     0.044 s
+  Starting ELPA eigensolver
+  Finished Cholesky decomposition
+  | Time :     0.014 s
+  Finished transformation to standard eigenproblem
+  | Time :     0.004 s
+  Finished solving standard eigenproblem
+  | Time :     0.050 s
+  Finished back-transformation of eigenvectors
+  | Time :     0.001 s
+
+  Obtaining occupation numbers and electronic chemical potential using ELSI.
+  | Note that, for insulating systems, the printed 'chemical potential' value is not uniquely defined.
+  | It can be anywhere in the energy gap, as long as it correctly separates occupied and unoccupied states.
+  | In systems with a gap, the physically relevant chemical potential is the VBM or HOMO.
+
+  | Chemical potential (Fermi level):     7.32239461 eV
+  Writing Kohn-Sham eigenvalues.
+
+  State    Occupation    Eigenvalue [Ha]    Eigenvalue [eV]
+      1       2.00000         -18.151345         -493.92322
+      2       2.00000         -18.082793         -492.05783
+      3       2.00000          -0.313350           -8.52667
+      4       2.00000          -0.233282           -6.34792
+      5       2.00000           0.153317            4.17198
+      6       2.00000           0.202642            5.51418
+      7       2.00000           0.207602            5.64914
+      8       2.00000           0.218192            5.93731
+      9       2.00000           0.264649            7.20145
+     10       2.00000           0.267258            7.27245
+     11       0.00000           0.270929            7.37234
+     12       0.00000           0.274812            7.47801
+     13       0.00000           0.276312            7.51884
+     14       0.00000           0.283549            7.71575
+     15       0.00000           0.297049            8.08312
+     16       0.00000           0.310822            8.45789
+     17       0.00000           0.328786            8.94671
+     18       0.00000           0.331686            9.02563
+     19       0.00000           0.337657            9.18812
+
+  Highest occupied state (VBM) at      7.27244950 eV
+  | Occupation number:      2.00000000
+ * WARNING: The VBM is higher than the internal energy zero!
+
+  Lowest unoccupied state (CBM) at     7.37233972 eV
+  | Occupation number:      0.00000000
+
+  Overall HOMO-LUMO gap:      0.09989022 eV.
+
+  Total energy components:
+  | Sum of eigenvalues            :         -70.93421854 Ha       -1930.21829499 eV
+  | XC energy correction          :         -18.46989737 Ha        -502.59147894 eV
+  | XC potential correction       :          23.75949373 Ha         646.52871954 eV
+  | Free-atom electrostatic energy:         -72.18514573 Ha       -1964.25775568 eV
+  | Hartree energy correction     :         -14.73480567 Ha        -400.95446259 eV
+  | Entropy correction            :          -0.00000000 Ha          -0.00000000 eV
+  | ---------------------------
+  | Total energy                  :        -152.56457358 Ha       -4151.49327265 eV
+  | Total energy, T -> 0          :        -152.56457358 Ha       -4151.49327265 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy        :        -152.56457358 Ha       -4151.49327265 eV
+
+  Derived energy quantities:
+  | Kinetic energy                :         150.76350727 Ha        4102.48376481 eV
+  | Electrostatic energy          :        -284.85818348 Ha       -7751.38555853 eV
+  | Energy correction for multipole
+  | error in Hartree potential    :          -0.00346305 Ha          -0.09423446 eV
+  | Sum of eigenvalues per atom                           :         -53.61717486 eV
+  | Total energy (T->0) per atom                          :        -115.31925757 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy per atom                       :        -115.31925757 eV
+
+  Self-consistency convergence accuracy:
+  | Change of charge density      :  0.3917E+00
+  | Change of unmixed KS density  :  0.1279E+02
+  | Change of sum of eigenvalues  : -0.1930E+04 eV
+  | Change of total energy        : -0.4151E+04 eV
+
+
+  ------------------------------------------------------------
+             Starting Unitary Localisation of CMOs
+  ------------------------------------------------------------
+ Exporting DM for embedding
+  Evaluating density matrix
+  Finished density matrix calculation
+  | Time :     0.001 s
+  Finished localisation of CMOs in           1.692 s
+
+  ------------------------------------------------------------
+            Completed Unitary Localisation of CMOs
+  ------------------------------------------------------------
+
+  Integrating Hamiltonian matrix: batch-based integration.
+  Time summed over all CPUs for integration: real work       82.528 s, elapsed       92.562 s
+  Writing Kohn-Sham eigenvalues.
+
+  State    Occupation    Eigenvalue [Ha]    Eigenvalue [eV]
+      1       2.00000         -18.151345         -493.92322
+      2       2.00000         -18.082793         -492.05783
+      3       2.00000          -0.313350           -8.52667
+      4       2.00000          -0.233282           -6.34792
+      5       2.00000           0.153317            4.17198
+      6       2.00000           0.202642            5.51418
+      7       2.00000           0.207602            5.64914
+      8       2.00000           0.218192            5.93731
+      9       2.00000           0.264649            7.20145
+     10       2.00000           0.267258            7.27245
+     11       0.00000           0.270929            7.37234
+     12       0.00000           0.274812            7.47801
+     13       0.00000           0.276312            7.51884
+     14       0.00000           0.283549            7.71575
+     15       0.00000           0.297049            8.08312
+     16       0.00000           0.310822            8.45789
+     17       0.00000           0.328786            8.94671
+     18       0.00000           0.331686            9.02563
+     19       0.00000           0.337657            9.18812
+
+  Highest occupied state (VBM) at      7.27244950 eV
+  | Occupation number:      2.00000000
+ * WARNING: The VBM is higher than the internal energy zero!
+
+  Lowest unoccupied state (CBM) at     7.37233972 eV
+  | Occupation number:      0.00000000
+
+  Overall HOMO-LUMO gap:      0.09989022 eV.
+
+  | Chemical Potential                          :     7.32239461 eV
+  | Note that, for insulating systems, the printed 'chemical potential' value is not uniquely defined.
+  | It can be anywhere in the energy gap, as long as it correctly separates occupied and unoccupied states.
+  | In systems with a gap, the physically relevant chemical potential is the VBM or HOMO.
+
+  Self-consistency cycle converged.
+
+
+------------------------------------------------------------
+  End self-consistency iteration #     0       :  max(cpu_time)    wall_clock(cpu1)
+  | Time for this iteration                     :        0.793 s           0.794 s
+  | Charge density update                       :        0.000 s           0.000 s
+  | Density mixing                              :        0.000 s           0.001 s
+  | Hartree multipole update                    :        0.006 s           0.006 s
+  | Hartree multipole summation                 :        0.066 s           0.065 s
+  | Integration                                 :        0.155 s           0.156 s
+  | Solution of K.-S. eqns.                     :        0.115 s           0.115 s
+  | Total energy evaluation                     :        0.000 s           0.000 s
+
+  Partial memory accounting:
+  | Current value for overall tracked memory usage:
+  |   Minimum:        8.078 MB (on task  17)
+  |   Maximum:        8.216 MB (on task 224)
+  |   Average:        8.122 MB
+  | Peak value for overall tracked memory usage:
+  |   Minimum:       25.235 MB (on task  64 after allocating wave)
+  |   Maximum:       29.523 MB (on task  89 after allocating wave)
+  |   Average:       27.582 MB
+  | Largest tracked array allocation so far:
+  |   Minimum:        4.642 MB (dm_dump on task   0)
+  |   Maximum:        4.642 MB (dm_dump on task   0)
+  |   Average:        4.642 MB
+  Note:  These values currently only include a subset of arrays which are explicitly tracked.
+  The "true" memory usage will be greater.
+------------------------------------------------------------
+  GGA post processing starts
+  | GGA total energy              :        -152.56457358 Ha,       -4151.49327265 eV
+------------------------------------------------------------
+
+
+  Energy and forces in a compact form:
+  | Total energy uncorrected      :         -0.415149327265465E+04 eV
+  | Total energy corrected        :         -0.415149327265465E+04 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy        :         -0.415149327265465E+04 eV
+  | Total energy post-processed   :         -0.415149327265465E+04 eV
+
+  ------------------------------------ 
+  Start decomposition of the XC Energy 
+  ------------------------------------ 
+  X and C from original XC functional choice 
+  Hartree-Fock Energy :          0.000000000 Ha              0.000000000 eV
+  X Energy            :        -17.817370442 Ha           -484.835317870 eV
+  C Energy            :         -0.652526926 Ha            -17.756161068 eV
+  XC Energy w/o HF    :        -18.469897367 Ha           -502.591478939 eV
+  Total XC Energy     :        -18.469897367 Ha           -502.591478939 eV
+  ------------------------------------ 
+  Post-processing X and C from self-consistent density 
+  Hartree-Fock Energy :          0.000000000 Ha              0.000000000 eV
+  X Energy            :        -17.817370442 Ha           -484.835317870 eV
+  C Energy            :         -0.652526926 Ha            -17.756161068 eV
+  Total XC Energy     :        -18.469897367 Ha           -502.591478939 eV
+  ------------------------------------ 
+  LDA X and C from self-consistent density 
+  X Energy LDA        :        -16.184762215 Ha           -440.409787685 eV
+  C Energy LDA        :         -1.318148282 Ha            -35.868639725 eV
+  ------------------------------------ 
+  End decomposition of the XC Energy 
+  ------------------------------------ 
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Final output of selected total energy values:
+
+  The following output summarizes some interesting total energy values
+  at the end of a run (AFTER all relaxation, molecular dynamics, etc.).
+
+  | Total energy of the DFT / Hartree-Fock s.c.f. calculation      :          -4151.493272655 eV
+  | Final zero-broadening corrected energy (caution - metals only) :          -4151.493272655 eV
+  | For reference only, the value of 1 Hartree used in FHI-aims is :             27.211384500 eV
+
+  Before relying on these values, please be sure to understand exactly which
+  total energy value is referred to by a given number. Different objects may
+  all carry the same name 'total energy'. Definitions:
+
+  Total energy of the DFT / Hartree-Fock s.c.f. calculation:
+  | Note that this energy does not include ANY quantities calculated after the
+  | s.c.f. cycle, in particular not ANY RPA, MP2, etc. many-body perturbation terms.
+
+  Final zero-broadening corrected energy:
+  | For metallic systems only, a broadening of the occupation numbers at the Fermi
+  | level can be extrapolated back to zero broadening by an electron-gas inspired
+  | formula. For all systems that are not real metals, this value can be
+  | meaningless and should be avoided.
+
+------------------------------------------------------------------------------
+  Methods described in the following list of references were used in this FHI-aims run.
+  If you publish the results, please make sure to cite these reference if they apply.
+  FHI-aims is an academic code, and for our developers (often, Ph.D. students
+  and postdocs), scientific credit in the community is essential.
+  Thank you for helping us!
+
+  For any use of FHI-aims, please cite:
+
+    Volker Blum, Ralf Gehrke, Felix Hanke, Paula Havu, Ville Havu,
+    Xinguo Ren, Karsten Reuter, and Matthias Scheffler
+    'Ab initio molecular simulations with numeric atom-centered orbitals'
+    Computer Physics Communications 180, 2175-2196 (2009)
+    http://doi.org/10.1016/j.cpc.2009.06.022
+
+
+  For the NAO-VCC-nZ basis sets used in this calculation, please cite:
+
+    Igor Ying Zhang, Xinguo Ren, Patrick Rinke, Volker Blum, and Matthias Scheffler
+    'Numeric atom-centered-orbital basis sets with valence-correlation consistency from H to Ar'
+    New Journal of Physics 15, 123033 (2013).
+    http://doi.org/10.1088/1367-2630/15/12/123033
+
+
+  The ELSI infrastructure was used in your run to solve the Kohn-Sham electronic structure.
+  Please check out https://wordpress.elsi-interchange.org to learn more.
+  If scalability is important for your project, please acknowledge ELSI by citing:
+
+    V. W-z. Yu, F. Corsetti, A. Garcia, W. P. Huhn, M. Jacquelin, W. Jia,
+    B. Lange, L. Lin, J. Lu, W. Mi, A. Seifitokaldani, A. Vazquez-Mayagoitia,
+    C. Yang, H. Yang, and V. Blum
+    'ELSI: A unified software interface for Kohn-Sham electronic structure solvers'
+    Computer Physics Communications 222, 267-285 (2018).
+    http://doi.org/10.1016/j.cpc.2017.09.007
+
+
+  For the real-space grid partitioning and parallelization used in this calculation, please cite:
+
+    Ville Havu, Volker Blum, Paula Havu, and Matthias Scheffler,
+    'Efficient O(N) integration for all-electron electronic structure calculation'
+    'using numerically tabulated basis functions'
+    Journal of Computational Physics 228, 8367-8379 (2009).
+    http://doi.org/10.1016/j.jcp.2009.08.008
+
+
+  The high-level electronic structure method used in your calculation
+  employed our efficient localized resolution of identity for the Coulomb operator.
+  Some calculations, especially large-scale hybrid density functional theory,
+  are only possible thanks to this development. For this feature, please cite:
+
+    Arvid Ihrig, Juergen Wieferink, Igor Ying Zhang, Matti Ropo, Xinguo Ren,
+    Patrick Rinke, Matthias Scheffler, and Volker Blum,
+    'Accurate localized resolution of identity approach for linear-scaling
+    hybrid density functionals and for many-body perturbation theory'
+    New Journal of Physics 117, 093020 (2015).
+    http://doi.org/10.1088/1367-2630/17/9/093020
+
+  Of course, there are many other important community references, e.g., those cited in the
+  above references. Our list is limited to references that describe implementations in the
+  FHI-aims code. The reason is purely practical (length of this list) - please credit others as well.
+------------------------------------------------------------
+Warnings summary:
+
+At least    2 warnings were raised during execution.
+** WARNING:
+ * Warning: The chosen 'charge_mix_param' value was not between zero or one.
+ * The value found in control.in should have caused s.c.f. convergence problems.
+** END OF WARNING
+
+------------------------------------------------------------
+          Leaving FHI-aims.
+          Date     :  20250628, Time     :  161456.784
+
+          Computational steps:
+          | Number of self-consistency cycles          :            0
+          | Number of SCF (re)initializations          :            1
+
+          Detailed time accounting                     :  max(cpu_time)    wall_clock(cpu1)
+          | Total time                                  :        2.412 s           2.457 s
+          | Preparation time                            :        0.243 s           0.241 s
+          | Boundary condition initalization            :        0.029 s           0.029 s
+          | Grid partitioning                           :        0.411 s           0.411 s
+          | Preloading free-atom quantities on grid     :        0.075 s           0.075 s
+          | Free-atom superposition energy              :        0.003 s           0.002 s
+          | Total time for integrations                 :        0.414 s           0.415 s
+          | Total time for solution of K.-S. equations  :        0.115 s           0.115 s
+          | Total time for density update               :        0.313 s           0.313 s
+          | Total time for mixing                       :        0.000 s           0.001 s
+          | Total time for Hartree multipole update     :        0.006 s           0.006 s
+          | Total time for Hartree multipole sum        :        0.066 s           0.065 s
+          | Total time for total energy evaluation      :        0.000 s           0.001 s
+          | Total time for scaled ZORA corrections      :        0.000 s           0.000 s
+          | Total time for Mulliken analysis            :        0.000 s           0.000 s
+
+          Partial memory accounting:
+          | Residual value for overall tracked memory usage across tasks:     0.000000 MB (should be 0.000000 MB)
+          | Peak values for overall tracked memory usage:
+          |   Minimum:       25.235 MB (on task  64 after allocating wave)
+          |   Maximum:       29.523 MB (on task  89 after allocating wave)
+          |   Average:       27.582 MB
+          | Largest tracked array allocation:
+          |   Minimum:        4.642 MB (dm_dump on task   0)
+          |   Maximum:        4.642 MB (dm_dump on task   0)
+          |   Average:        4.642 MB
+          Note:  These values currently only include a subset of arrays which are explicitly tracked.
+          The "true" memory usage will be greater.
+
+          Have a nice day.
+------------------------------------------------------------

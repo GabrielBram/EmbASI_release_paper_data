@@ -1,0 +1,44 @@
+#!/bin/bash --login
+
+#SBATCH --job-name=M06-2XBMARK
+#SBATCH --nodes=16
+#SBATCH --tasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:20:00
+
+# Replace [budget code] below with your project code (e.g. t01)
+#SBATCH --account=e05-algor-log
+# Choices here: standard, highmem, gpu
+#SBATCH --partition=standard
+# Choices here: short, standard, long, with max walltime of 20 min, 24 hours and 48 hours, respectively.
+#SBATCH --qos=short
+
+# Setup the batch environment
+module load epcc-job-env
+module load PrgEnv-gnu
+module load cray-python
+
+# Propagate the cpus-per-task setting from script to srun commands
+#    By default, Slurm does not propagate this setting from the sbatch
+#    options to srun commands in the job script. If this is not done,
+#    process/thread pinning may be incorrect leading to poor performance
+export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+
+# Load the Python working environment
+. /work/e05/e05/gabram/.embasi_py3.9.13/bin/activate
+export PYTHONPATH=/work/e05/e05/gabram/carmm/:$PYTHONPATH
+
+# Set the number of threads to 1. This prevents any threaded system libraries from automatically using threading.
+export OMP_NUM_THREADS=1
+
+# Set stacksize to unlimited for FHI-aims
+ulimit -s unlimited
+
+# Define path to the chemsh-py executable
+export executable="python3"
+
+time srun --nodes=1 --ntasks=64 --cpu-bind=cores --distribution=block:block --hint=nomultithread $executable input.py > output &
+
+
+echo $PYTHONPATH
+

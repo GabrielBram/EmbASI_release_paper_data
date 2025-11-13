@@ -1,0 +1,92 @@
+#!/bin/bash --login
+
+#SBATCH --job-name=M06-2XBMARK
+#SBATCH --nodes=16
+#SBATCH --tasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:20:00
+
+# Replace [budget code] below with your project code (e.g. t01)
+#SBATCH --account=e05-algor-log
+# Choices here: standard, highmem, gpu
+#SBATCH --partition=standard
+# Choices here: short, standard, long, with max walltime of 20 min, 24 hours and 48 hours, respectively.
+#SBATCH --qos=short
+
+# Setup the batch environment
+module load epcc-job-env
+module load PrgEnv-gnu
+module load cray-python
+
+# Propagate the cpus-per-task setting from script to srun commands
+#    By default, Slurm does not propagate this setting from the sbatch
+#    options to srun commands in the job script. If this is not done,
+#    process/thread pinning may be incorrect leading to poor performance
+export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+
+# Load the Python working environment
+. /work/e05/e05/gabram/.embasi_py3.9.13/bin/activate
+export PYTHONPATH=/work/e05/e05/gabram/carmm/:$PYTHONPATH
+
+# Set the number of threads to 1. This prevents any threaded system libraries from automatically using threading.
+export OMP_NUM_THREADS=1
+
+# Set stacksize to unlimited for FHI-aims
+ulimit -s unlimited
+
+# Define path to the chemsh-py executable
+export executable="python3"
+
+echo $PYTHONPATH
+
+if [ "$#" -ne 8 ]; then
+    echo "Usage: $0 <nnodes_per_subjob> <tranchestart> <trancheend> <hlxc> <llxc> <totalenmethod> <basis> <nncut>"
+    exit 1
+fi
+
+
+export llxc=$4
+export hlxc=$5
+export tenmethod=$6
+export basispath="/work/e05/e05/gabram/FHIaims/species_defaults/NAO-VCC-nZ/${basis}"
+export basis=$7
+export nncut=$8
+export rundir=nn${nncut}_${basis}
+export nnodes_per_task=$1
+export ntasks=$(( 128*$nnodes_per_task ))
+
+export tstart=$2
+export tend=$3
+
+
+for i in $(seq $tstart $tend) ; do
+    if [ "$tenmethod" == "None" ]; then
+	export filnamebase="dissoc_test_${hlxc}in${llxc}_${nncut}nn_${basis}"
+    else
+	export filnamebase="dissoc_test_${tenmethod}@${hlxc}in${llxc}_${nncut}nn_${basis}"
+    fi
+
+    export input=${filnamebase}_${i}".py"
+    export output=${filnamebase}_${i}".out"
+    export error=${filnamebase}_${i}".err"
+
+    mkdir $rundir
+    cp csv_writer.py $rundir
+    
+    cat calc_base.py > ${rundir}/${input}
+    echo "pentanol_dimer = read('pentanol_molecules.xyz', index=$i)" >> ${rundir}/${input}
+
+    echo "os.environ['AIMS_SPECIES_DIR'] = \"${basispath}/${basis}\"" >> ${rundir}/${input}
+
+    if [ "$tenmethod" == "None" ]; then
+	echo "run_single_fragment_full_molecule(pentanol_dimer, hl_calc=calc_hl, ll_calc=calc_ll, hl_xc=\"${llxc}\", ll_xc=\"${hlxc}\", post_hf_method=None, basis=\"${basis}\", run_dir=\"${rundir}\")"  >> ${rundir}/${input}
+    else
+	echo "run_single_fragment_full_molecule(pentanol_dimer, hl_calc=calc_hl, ll_calc=calc_ll, hl_xc=\"${llxc}\", ll_xc=\"${hlxc}\", post_hf_method=\"${tenmethod}\", basis=\"${basis}\", run_dir=\"${rundir}\")"  >> ${rundir}/${input}
+    fi
+    
+    time srun --nodes=$nnodes_per_task --ntasks=$ntasks --cpu-bind=cores --distribution=block:block --hint=nomultithread $executable ${rundir}/${input} > ${rundir}/${output} 2>${rundir}/${error} &
+
+done
+
+# Wait for all background subjobs to finish
+wait

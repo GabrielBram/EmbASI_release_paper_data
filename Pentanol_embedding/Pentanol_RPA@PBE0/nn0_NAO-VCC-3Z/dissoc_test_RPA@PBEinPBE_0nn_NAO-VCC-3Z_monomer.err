@@ -1,0 +1,2 @@
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 10031730.0 ON nid002076 CANCELLED AT 2025-07-02T22:45:37 ***

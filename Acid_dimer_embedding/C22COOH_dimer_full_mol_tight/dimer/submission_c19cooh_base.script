@@ -1,0 +1,101 @@
+#!/bin/bash --login
+
+#SBATCH -n 64
+#SBATCH --tasks-per-node=64
+#SBATCH --cpus-per-task=1
+#SBATCH -t 0-24:00
+#SBATCH -p c_compute_chemy3
+#SBATCH --exclude cca[9064]
+##SBATCH --mail-type=ALL
+##SBATCH --mail-user=BramleyG@cardiff.ac.uk
+#SBATCH --account=scw1057
+
+# module approach to setting up working environment
+module purge
+# Load the environment
+module load mpi
+module load python/3.9.2
+module use /apps/local/modules/projects
+module load scw1057/fhi-aims
+
+ulimit -s unlimited
+
+export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+
+# Load the Python working environment
+export OMP_NUM_THREADS=1
+source /scratch/c.sacgb4/EmbASI_tests/Software/.python-3.9.2_embasi/bin/activate
+export PYTHONPATH=/home/c.sacgb4/carmm_geodesic/:$PYTHONPATH
+
+# Define path to the chemsh-py executable
+export executable="python3"
+
+echo $PYTHONPATH
+
+# Define path to the chemsh-py executable
+export executable="python3"
+
+echo $PYTHONPATH
+
+if [ "$#" -ne 7 ]; then
+    echo "Usage: $0 <nnodes_per_subjob> <trunc> <hlxc> <llxc> <totalenmethod> <basis> <nncut>"
+    exit 1
+fi
+
+export nnodes_per_task=$1
+export trunc=$2
+export hlxc=$3
+export llxc=$4
+export tenmethod=$5
+export basispath="/scratch/c.sacgb4/EmbASI_tests/Software/FHIaims/species_defaults/defaults_2020/${basis}"
+export basis=$6
+export nncut=$7
+export rundir=trunc-${trunc}_${basis}_${hlxc}_${llxc}_${tenmethod}
+export ntasks=$(( 64*$nnodes_per_task ))
+
+if [ "$tenmethod" == "None" ]; then
+    export filnamebase="dissoc_test_${hlxc}in${llxc}_${nncut}nn_${basis}"
+else
+    export filnamebase="dissoc_test_${tenmethod}@${hlxc}in${llxc}_${nncut}nn_${basis}"
+fi
+
+export input=${filnamebase}_${trunc}".py"
+export output=${filnamebase}_${trunc}".out"
+export error=${filnamebase}_${trunc}".err"
+
+mkdir $rundir
+cp csv_writer.py $rundir
+    
+cat calc_base.py > ${rundir}/${input}
+#echo "dimer = read('dimer.xyz')" >> ${rundir}/${input}
+echo "c19cooh = read('c19cooh.xyz')" >> ${rundir}/${input}
+echo "ch3cooh = read('ch3cooh.xyz')" >> ${rundir}/${input}
+    
+if [ $nncut -eq 0 ] ; then
+    echo "region2 = [0, 1, 2, 3]" >> ${rundir}/${input}
+else
+    echo "region2 = [0, 1, 2, 3]" >> ${rundir}/${input}
+fi
+
+echo "embed_mask_ch3cooh = [2]*len(ch3cooh)" >> ${rundir}/${input}
+echo "embed_mask_c19cooh = [2]*len(c19cooh)" >> ${rundir}/${input}
+echo "for atom_idx in region2:" >> ${rundir}/${input}
+echo "    embed_mask_ch3cooh[atom_idx] = 1" >> ${rundir}/${input}
+echo "for atom_idx in region2:" >> ${rundir}/${input}
+echo "    embed_mask_c19cooh[atom_idx] = 1" >> ${rundir}/${input}
+
+echo "os.environ['AIMS_SPECIES_DIR'] = \"${basispath}/${basis}\"" >> ${rundir}/${input}
+
+if [ "$tenmethod" == "None" ]; then
+#    echo "run_single_fragment(ch3cooh, embed_mask=embed_mask_ch3cooh, hl_calc=calc_hl, ll_calc=calc_ll, hl_xc=\"${hlxc}\", ll_xc=\"${llxc}\", post_hf_method=None, basis=\"${basis}\", run_dir=\"${rundir}/CH3COOH\", trunc=${trunc}, frag_name=\"CH3COOH\")"  >> ${rundir}/${input}
+    echo "run_single_fragment(c19cooh, embed_mask=embed_mask_c19cooh, hl_calc=calc_hl, ll_calc=calc_ll, hl_xc=\"${hlxc}\", ll_xc=\"${llxc}\", post_hf_method=None, basis=\"${basis}\", run_dir=\"${rundir}/C19COOH\", trunc=${trunc}, frag_name=\"C19COOH\")"  >> ${rundir}/${input}
+
+else
+#    echo "run_single_fragment(ch3cooh, embed_mask=embed_mask_ch3cooh, hl_calc=calc_hl, ll_calc=calc_ll, hl_xc=\"${hlxc}\", ll_xc=\"${llxc}\", post_hf_method=\"${tenmethod}\", basis=\"${basis}\", run_dir=\"${rundir}/CH3COOH\", trunc=${trunc}, frag_name=\"CH3COOH\")"  >> ${rundir}/${input}
+    echo "run_single_fragment(c19cooh, embed_mask=embed_mask_c19cooh, hl_calc=calc_hl, ll_calc=calc_ll, hl_xc=\"${hlxc}\", ll_xc=\"${llxc}\", post_hf_method=\"${tenmethod}\", basis=\"${basis}\", run_dir=\"${rundir}/C19COOH\", trunc=${trunc}, frag_name=\"C19COOH\")"  >> ${rundir}/${input}
+fi
+    
+time srun --nodes=$nnodes_per_task --ntasks=$ntasks --cpu-bind=cores --distribution=block:block --hint=nomultithread $executable ${rundir}/${input} > ${rundir}/${output} 2>${rundir}/${error} &
+
+# Wait for all background subjobs to finish
+wait

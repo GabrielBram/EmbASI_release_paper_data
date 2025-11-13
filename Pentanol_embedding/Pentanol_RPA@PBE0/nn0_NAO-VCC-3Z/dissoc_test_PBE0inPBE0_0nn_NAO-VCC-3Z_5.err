@@ -1,0 +1,5 @@
+srun: error: nid002138: tasks 1-64: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=9986883.2
+slurmstepd: error: *** STEP 9986883.2 ON nid002138 CANCELLED AT 2025-06-28T19:21:22 ***
+srun: error: nid002138: tasks 0,65-127: Terminated
+srun: Force Terminated StepId=9986883.2

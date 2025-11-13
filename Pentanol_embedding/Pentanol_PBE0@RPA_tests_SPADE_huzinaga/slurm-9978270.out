@@ -1,0 +1,23 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"epcc-job-env"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "epcc-job-env"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/work/e05/e05/gabram/carmm/:/opt/cray/pe/python/3.9.13.1
+srun: error: nid001027: tasks 256-383: Floating point exception
+srun: launch/slurm: _step_signal: Terminating StepId=9978270.0
+srun: error: nid001028: tasks 384-511: Floating point exception
+slurmstepd: error: *** STEP 9978270.0 ON nid001007 CANCELLED AT 2025-06-27T17:16:59 ***
+srun: error: nid001010: tasks 128-255: Floating point exception
+srun: error: nid001007: tasks 0-127: Floating point exception
+
+real	1m6.586s
+user	0m0.015s
+sys	0m0.036s

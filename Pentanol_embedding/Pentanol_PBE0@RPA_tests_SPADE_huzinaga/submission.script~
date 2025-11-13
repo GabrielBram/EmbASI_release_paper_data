@@ -1,0 +1,41 @@
+#!/bin/bash --login
+
+#SBATCH --job-name=M06-2XBMARK
+#SBATCH --nodes=16
+#SBATCH --tasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:20:00
+
+# Replace [budget code] below with your project code (e.g. t01)
+#SBATCH --account=e05-react-log
+# Choices here: standard, highmem, gpu
+#SBATCH --partition=standard
+# Choices here: short, standard, long, with max walltime of 20 min, 24 hours and 48 hours, respectively.
+#SBATCH --qos=short
+
+# Setup the batch environment
+module load epcc-job-env
+module load PrgEnv-gnu
+module load cray-python
+
+# Load the Python working environment
+. /work/e05/e05/gabram/.embasi_py3.9.13/bin/activate
+export PYTHONPATH=/work/e05/e05/gabram/carmm/:$PYTHONPATH
+
+# Set the number of threads to 1. This prevents any threaded system libraries from automatically using threading.
+export OMP_NUM_THREADS=1
+
+# Set stacksize to unlimited for FHI-aims
+ulimit -s unlimited
+
+# Define path to the chemsh-py executable
+export executable="python3"
+export input="dissoc_test_rpainpbe0_1nn.py"
+export output=test.log
+
+echo $PYTHONPATH
+
+for i in $input; do
+# srun launches the parallel program based on the SBATCH options. Would --cpu-bind=cores be useful?
+    time srun --cpu-bind=cores --distribution=block:block --hint=nomultithread $executable $i > $i.$output
+done

@@ -1,0 +1,130 @@
+Running EmbASI calculation in directory: trunc-0.001_tight_PBE0_PBE_None/CH3COOH/0.001
+MO projection performed with: self-consistent Huzinaga equations
+Embedding calculation begun...
+Calculation trunc-0.001_tight_PBE0_PBE_None/CH3COOH/0.001/AB_LL...
+Initialising basis info...
+Pre-GC AB_LL: (419658, 8461258)
+Starting SPADE localisation...
+Maximum SPADE state for subsystem A: 12
+SPADE total supersystem A+B charge: 32.000000000000014
+SPADE localised subsystem A charge: 24.000000000000014
+SPADE localised subsystem B charge: 7.999999999999998
+Exiting SPADE localisation...
+ 
+ ----------- Performing Truncation --------- 
+ 
+ Number of atoms before truncation: 8
+ Number of atoms after truncation: 8
+ 
+ Number of basis functions before truncation: 216
+ Number of basis functions after truncation: 216
+ 
+ ------------------------------------------- 
+ 
+Initialising basis info...
+ Population of Subsystem AB: 32.000000000000014
+ Population of Subsystem A: 24.000000000000014
+ Population of Subsystem B: 7.999999999999998
+Calculation trunc-0.001_tight_PBE0_PBE_None/CH3COOH/0.001/A_LL...
+Pre-GC A_LL: (1778229, 9240052)
+Post-GC A_LL: (1189068, 9240052)
+Calculation trunc-0.001_tight_PBE0_PBE_None/CH3COOH/0.001/A_HL...
+Pre-GC A_HL: (2820431, 9605342)
+Post-GC A_HL: (1461292, 9605342)
+Calculation trunc-0.001_tight_PBE0_PBE_None/CH3COOH/0.001/A_HL_PP...
+Pre-GC A_HL_PP: (2248328, 10084825)
+Post-GC A_HL_PP: (1466386, 10084825)
+ ----------- FINAL         OUTPUTS --------- 
+ 
+ Population Information:
+ Population of Subsystem AB: 32.000000000000014
+ Population of Subsystem A: 24.000000000000014
+ Population of Subsystem B: 7.999999999999998
+ 
+ ----------- TIMING    INFORMATION --------- 
+ Total time: 21.090617179870605 s
+ Peak memory usage: 9.61763858795166 MB
+ ------------------------------------------- 
+ Intermediate Information:
+ WARNING: These are not faithful, ground-state KS total energies - 
+ In the case of low-level references, they are calculated using the 
+ density components of the high-level energy reference for fragment A. 
+ Do not naively use these energies unless you are comfortable with 
+ their true definition. 
+ Total Energy (A+B Low-Level): -6235.996106226149 eV
+ Total Energy (A Low-Level): -5114.295523989325 eV
+ Total Energy (A High-Level): -5114.800301766249 eV
+ Projection operator energy correction DM^(A_HL) @ Pb: 0 eV
+ First order energy correction (DM^(A_HL)-DM^(A_LL)) @ v_emb): 0.6276867698362668 eV
+  
+ Final Energies Information:
+ Final total energy (Uncorrected): -6235.873197233236 eV
+ Final total energy (Projection Corrected): -6235.873197233236 eV
+ 
+ -----------======================--------- 
+ 
+Running EmbASI calculation in directory: trunc-0.001_tight_PBE0_PBE_None/C19COOH/0.001
+MO projection performed with: self-consistent Huzinaga equations
+Embedding calculation begun...
+Calculation trunc-0.001_tight_PBE0_PBE_None/C19COOH/0.001/AB_LL...
+Initialising basis info...
+Pre-GC AB_LL: (4087124, 10084825)
+Starting SPADE localisation...
+Maximum SPADE state for subsystem A: 12
+SPADE total supersystem A+B charge: 176.0000000000005
+SPADE localised subsystem A charge: 23.999999999999986
+SPADE localised subsystem B charge: 152.00000000000054
+Exiting SPADE localisation...
+ 
+ ----------- Performing Truncation --------- 
+ 
+ Number of atoms before truncation: 62
+ Number of atoms after truncation: 14
+ 
+ Number of basis functions before truncation: 1458
+ Number of basis functions after truncation: 378
+ 
+ ------------------------------------------- 
+ 
+Initialising basis info...
+ Population of Subsystem AB: 176.0000000000005
+ Population of Subsystem A: 23.999999999999986
+ Population of Subsystem B: 152.00000000000054
+Calculation trunc-0.001_tight_PBE0_PBE_None/C19COOH/0.001/A_LL...
+Pre-GC A_LL: (4063049, 10933598)
+Post-GC A_LL: (3308494, 10933598)
+Calculation trunc-0.001_tight_PBE0_PBE_None/C19COOH/0.001/A_HL...
+Pre-GC A_HL: (5215795, 11722992)
+Post-GC A_HL: (3858682, 11722992)
+Calculation trunc-0.001_tight_PBE0_PBE_None/C19COOH/0.001/A_HL_PP...
+Pre-GC A_HL_PP: (4722586, 12494839)
+Post-GC A_HL_PP: (3863772, 12494839)
+ ----------- FINAL         OUTPUTS --------- 
+ 
+ Population Information:
+ Population of Subsystem AB: 176.0000000000005
+ Population of Subsystem A: 23.999999999999986
+ Population of Subsystem B: 152.00000000000054
+ 
+ ----------- TIMING    INFORMATION --------- 
+ Total time: 58.17740082740784 s
+ Peak memory usage: 11.916007041931152 MB
+ ------------------------------------------- 
+ Intermediate Information:
+ WARNING: These are not faithful, ground-state KS total energies - 
+ In the case of low-level references, they are calculated using the 
+ density components of the high-level energy reference for fragment A. 
+ Do not naively use these energies unless you are comfortable with 
+ their true definition. 
+ Total Energy (A+B Low-Level): -25484.453120710023 eV
+ Total Energy (A Low-Level): -5111.796221155617 eV
+ Total Energy (A High-Level): -5112.838049432426 eV
+ Projection operator energy correction DM^(A_HL) @ Pb: 0 eV
+ First order energy correction (DM^(A_HL)-DM^(A_LL)) @ v_emb): 1.1010395293102153 eV
+  
+ Final Energies Information:
+ Final total energy (Uncorrected): -25484.39390945752 eV
+ Final total energy (Projection Corrected): -25484.39390945752 eV
+ 
+ -----------======================--------- 
+ 

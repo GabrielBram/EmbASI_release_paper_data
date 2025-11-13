@@ -1,0 +1,65 @@
+Running EmbASI calculation in directory: trunc-0.001_tight_PBE_PBE_None/0.001
+MO projection performed with: huzinaga
+Embedding calculation begun...
+Calculation trunc-0.001_tight_PBE_PBE_None/0.001/AB_LL...
+Initialising basis info...
+Pre-GC AB_LL: (3476678, 8463170)
+Starting SPADE localisation...
+Maximum SPADE state for subsystem A: 24
+SPADE total supersystem A+B charge: 208.00000000000003
+SPADE localised subsystem A charge: 48.0000000000002
+SPADE localised subsystem B charge: 159.9999999999998
+Exiting SPADE localisation...
+ 
+ ----------- Performing Truncation --------- 
+ 
+ Number of atoms before truncation: 70
+ Number of atoms after truncation: 22
+ 
+ Number of basis functions before truncation: 1674
+ Number of basis functions after truncation: 594
+ 
+ ------------------------------------------- 
+ 
+Initialising basis info...
+ Population of Subsystem AB: 208.00000000000003
+ Population of Subsystem A: 48.0000000000002
+ Population of Subsystem B: 159.9999999999998
+Calculation trunc-0.001_tight_PBE_PBE_None/0.001/A_LL...
+Pre-GC A_LL: (5156343, 11345098)
+Post-GC A_LL: (4436844, 11345098)
+Calculation trunc-0.001_tight_PBE_PBE_None/0.001/A_HL...
+Pre-GC A_HL: (6004970, 12855274)
+Post-GC A_HL: (4713403, 12855274)
+Calculation trunc-0.001_tight_PBE_PBE_None/0.001/A_HL_PP...
+Pre-GC A_HL_PP: (5806421, 13394286)
+Post-GC A_HL_PP: (4726561, 13394286)
+ ----------- FINAL         OUTPUTS --------- 
+ 
+ Population Information:
+ Population of Subsystem AB: 208.00000000000003
+ Population of Subsystem A: 48.0000000000002
+ Population of Subsystem B: 159.9999999999998
+ 
+ ----------- TIMING    INFORMATION --------- 
+ Total time: 55.34191155433655 s
+ Peak memory usage: 12.773786544799805 MB
+ ------------------------------------------- 
+ Intermediate Information:
+ WARNING: These are not faithful, ground-state KS total energies - 
+ In the case of low-level references, they are calculated using the 
+ density components of the high-level energy reference for fragment A. 
+ Do not naively use these energies unless you are comfortable with 
+ their true definition. 
+ Total Energy (A+B Low-Level): -31721.147507488975 eV
+ Total Energy (A Low-Level): -10224.028193244634 eV
+ Total Energy (A High-Level): 3811.948018278288 eV
+ Projection operator energy correction DM^(A_HL) @ Pb: 0 eV
+ First order energy correction (DM^(A_HL)-DM^(A_LL)) @ v_emb): -2207.796411032622 eV
+  
+ Final Energies Information:
+ Final total energy (Uncorrected): -19892.967706998672 eV
+ Final total energy (Projection Corrected): -19892.967706998672 eV
+ 
+ -----------======================--------- 
+ 
